@@ -1,0 +1,24 @@
+// CI-Lang 2.0: Living Memory & Agent Test
+// This program demonstrates variables that "drift" over time.
+
+agent Sensor {
+    state {
+        val: 0.5,
+        reading: 0.0
+    }
+    volatility = 0.2; // High volatility = fast drift
+    
+    update(dt) {
+        // Drift is handled by the VM's internal loop
+        // Here we just use the drifting values
+        reading = val;
+        print(reading);
+    }
+}
+
+system Ecosystem {
+    // Set global entropy high to see the drift
+    // entropy::set(0.8);
+    
+    spawn Sensor size=10;
+}

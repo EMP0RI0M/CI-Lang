@@ -1,0 +1,53 @@
+<program>       ::= { <statement> | <chaos-directive> }*
+
+<statement>     ::= <declaration> | <expression> | <control-flow> | <chaos-statement> | <import>
+
+<declaration>   ::= <variable-decl> | <function-decl> | <class-decl> | <chaos-decl>
+
+<variable-decl> ::= "let" <identifier> [ ":" <type> ] [ "=" <expression> ] ";"
+<chaos-decl>    ::= "chaos" <identifier> "=" <chaos-expression> ";"
+
+<function-decl> ::= "func" <identifier> "(" [ <parameter-list> ] ")" [ ":" <type> ] <block>
+<parameter-list> ::= <parameter> { "," <parameter> }
+<parameter>      ::= <identifier> [ ":" <type> ]
+
+<class-decl>    ::= "class" <identifier> [ ":" <identifier> ] <block>
+
+<block>         ::= "{" { <statement> } "}"
+
+<expression>    ::= <literal> 
+                  | <identifier> 
+                  | <function-call> 
+                  | <binary-expr> 
+                  | <unary-expr> 
+                  | "(" <expression> ")"
+                  | <chaos-expression>
+
+<function-call> ::= <identifier> "(" [ <argument-list> ] ")"
+<argument-list> ::= <expression> { "," <expression> }
+
+<binary-expr>   ::= <expression> <operator> <expression>
+<unary-expr>    ::= <unary-op> <expression>
+
+<operator>      ::= "+" | "-" | "*" | "/" | "%" | "**" | "==" | "!=" | "<" | ">" | "<=" | ">=" | "&&" | "||" | "≈" | "→"
+<unary-op>      ::= "!" | "~" | "entropize"
+
+<control-flow>  ::= <if-stmt> | <while-stmt> | <for-stmt> | <return-stmt> | <chaos-control>
+
+<if-stmt>       ::= "if" "(" <expression> ")" <block> [ "else" <block> ]
+<while-stmt>    ::= "while" "(" <expression> ")" <block>
+<for-stmt>      ::= "for" "(" <identifier> "in" <expression> ")" <block>
+<return-stmt>   ::= "return" [ <expression> ] ";"
+
+<chaos-directive> ::= "flux" <block> 
+                    | "entropy" "(" <expression> ")" <block>
+                    | "adapt" <identifier> "to" <expression> ";"
+
+<chaos-control>   ::= "chaos" <block>
+
+<chaos-expression> ::= "⟨" <expression> "⟨" | <expression> "→" <expression>
+
+<type>          ::= "int" | "float" | "string" | "bool" | <identifier>
+
+<identifier>    ::= <letter> { <letter> | <digit> | "_" }
+<literal>       ::= <integer> | <float> | <string> | <boolean>

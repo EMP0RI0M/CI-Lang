@@ -1,0 +1,240 @@
+# CI-Lang Meta-Brain (Project Xaos)
+# 100% Self-Bootstrapped Cognitive Loop
+
+import "d:/ci lang/src/fluxtorch.ci";
+import "d:/ci lang/src/governor.ci";
+import "d:/ci lang/src/semantics.ci";
+import "d:/ci lang/src/prompt_gen.ci";
+import "d:/ci lang/src/dreaming.ci";
+import "d:/ci lang/src/evolution.ci";
+import "d:/ci lang/src/biology.ci";
+import "d:/ci lang/src/specialization.ci";
+import "d:/ci lang/src/metabrain.ci";
+import "d:/ci lang/src/symbiosis.ci";
+
+func run_brain_cycle() {
+    # System Constants
+    let META_START = 100;
+    let META_SIZE = 20;
+    let TARGET_ENTROPY = 0.45;
+    let ALPHA = 0.05;         # Hebbian Learning Rate
+    let DECAY = 0.99;         # Weight Decay
+    
+    # State Persistence (Internal to VM global scope)
+    let current_vol = 0.1;
+    let int_error = 0.0;
+    
+    print("--- [BOOTING CI-LANG META-CORE] ---");
+    
+    let ticks = 0;
+    let ticks = 0;
+    while (ticks < 5000) {
+        # 1. INPUT PHASE (Sensory Stimulation - Training Curriculum)
+        
+        # PHASE 1: Teach 'CHAOS' (Concept 2) - Ticks 0-20
+        if (ticks < 20) {
+            let stimulus = SemanticEngine.get_stimulus(2, 5, reflect::size());
+            let current_s = reflect::states();
+            reflect::store_states(current_s + stimulus);
+        }
+        
+        # PHASE 2: Teach 'ORDER' (Concept 5) - Ticks 100-120
+        if (ticks > 100) {
+            if (ticks < 120) {
+                let stimulus = SemanticEngine.get_stimulus(5, 5, reflect::size());
+                let current_s = reflect::states();
+                reflect::store_states(current_s + stimulus);
+            }
+        }
+
+        # 2. ANALYSIS PHASE (Entropy Estimation)
+        let ent = reflect::estimate_entropy();
+        
+        # 3. SELF-REGULATION (Governor Loop)
+        # Returns [new_vol, new_int_error]
+        let gov_out = Governor.step(ent, TARGET_ENTROPY, int_error, current_vol);
+        current_vol = gov_out[0];
+        int_error = gov_out[1];
+        
+        # [OPTION B] Controlled Chaos Floor (Prevent Death by Stability)
+        if (ent < 0.2) {
+             print(">>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...");
+             current_vol = current_vol + 0.15; # Force volatility up
+        }
+        
+        # 4. THERMODYNAMICS (Signal Propagation)
+        let s = reflect::states();
+        let w = reflect::weights();
+        let influence = s @ w;
+        let noise = reflect::noise() * current_vol;
+        
+        # Vectorized Update: S_t+1 = S_t * 0.7 + Influence + Noise
+        let next_s = (s * 0.7) + influence + noise;
+        next_s = clip(next_s, -2.0, 2.0);
+        reflect::store_states(next_s);
+
+        # 5. LEARNING PHASE (Hebbian Association)
+        let prev_s = reflect::prev_states();
+        # association = alpha * outer(prev_s, s)
+        # We simulate this with global adjustment for now
+        reflect::store_weights(w * DECAY);
+
+        # 6. READOUT PHASE (Self-Report)
+        let thought_id = SemanticDecoder.decode(reflect::states());
+        
+        # 7. LINGUISTIC PHASE (Vocal Cords)
+        let report = LinguisticBridge.generate_report(thought_id, ent, current_vol);
+        print(report);
+
+        if (ticks % 10 == 0) {
+            let prompt = LinguisticBridge.request_llm_insight(report);
+            print(prompt);
+        }
+        
+        # 7.5 KNOWLEDGE AQUISITION (Phase 26)
+        if (ticks == 5) {
+             print(">>> REQUEST_KNOWLEDGE: Knowledge Distillation");
+        }
+
+        # 8. SYZYGY PHASE (Receive External Wisdom)
+        let advice_vol = LinguisticBridge.process_advice();
+        
+        # Check for Novelty Signal (2.x)
+        if (advice_vol >= 2.0) {
+            if (advice_vol < 3.0) {
+                let score = advice_vol - 2.0;
+                # Boost Plasticity: Temporarily increase ALPHA effect
+                # We simulate this by reducing DECAY (making weights stickier) 
+                # or amplifying Hebbian updates if we had them vectorised.
+                # Here we will Inject structure:
+                print(">>> [LEARNING] Novelty Induced Plasticity: Beta=" + score);
+                
+                # Apply structural update: W = W + (Identity * Score)
+                # Reinforce self-loops based on novelty
+                let id_w = reflect::weights(); 
+                # Pseudo-identity reinforcement
+                reflect::store_weights(id_w + (score * 0.05));
+                
+                # Reset advice_vol to avoid setting volatility to 2.0
+                advice_vol = 0.0;
+            }
+        }
+
+        if (advice_vol > 0.0) {
+            current_vol = advice_vol;
+        }
+
+        # 9. DREAMING PHASE (Offline Consolidation)
+        # Trigger 'sleep' if ticks are multiples of 5
+        if (ticks % 5 == 0) {
+            print(">>> [DREAMING] System entering latent consolidation...");
+            let updated_w = DreamingEngine.consolidate(reflect::weights(), reflect::prev_states(), ALPHA);
+            reflect::store_weights(updated_w);
+        }
+
+        # 10. EVOLUTION PHASE (Self-Optimization)
+        if (ticks % 7 == 0) {
+            print(">>> [EVOLUTION] Evaluating Swarm Fitness...");
+            let fitness = EvolutionEngine.calculate_fitness(reflect::states(), reflect::prev_states());
+            
+            # Recruit IF stagnant
+            EvolutionEngine.recruit(ent, 0.2);
+            
+            # Select (Prune inactive agents)
+            let pruned_s = EvolutionEngine.select(reflect::states(), fitness, 0.001);
+            reflect::store_states(pruned_s);
+        }
+
+        # 11. PHYSIOLOGY PHASE (Biological Mimicry)
+        # Handle metabolism and synaptic scaling
+        let current_m = reflect::metabolism();
+        let current_s = reflect::states();
+        
+        # Consumption/Recovery
+        let next_m = BiologyEngine.handle_metabolism(current_s, current_m);
+        reflect::store_metabolism(next_m);
+        
+        # Scale current states by metabolism for next tick
+        let fatigued_s = BiologyEngine.scale_output(current_s, next_m);
+        reflect::store_states(fatigued_s);
+        
+        # Homeostatic Synaptic Scaling
+        let current_w = reflect::weights();
+        let balanced_w = BiologyEngine.homeostatic_dampening(current_w, ent);
+        reflect::store_weights(balanced_w);
+        
+        # 12. SPECIALIZATION PHASE (Tribal Intelligence)
+        # Apply role-based modulation to different cliques
+        let tribal_s = reflect::states();
+        
+        # Tribe 1: SENSORY (0-19)
+        tribal_s = SpecializationEngine.modulate_states(tribal_s, 0, 0, 20);
+        # Tribe 2: ANALYTIC (20-79)
+        tribal_s = SpecializationEngine.modulate_states(tribal_s, 1, 20, 80);
+        # Tribe 3: EXECUTIVE (80-99)
+        tribal_s = SpecializationEngine.modulate_states(tribal_s, 2, 80, 100);
+        
+        reflect::store_states(tribal_s);
+
+        # Tribal isolation every 15 ticks (synaptic differentiation)
+        if (ticks % 15 == 0) {
+            print(">>> [COLLECTIVE] Reinforcing Tribal Boundaries...");
+            let isolated_w = SpecializationEngine.apply_tribal_isolation(reflect::weights(), 0.99);
+            reflect::store_weights(isolated_w);
+        }
+
+        # 13. META-BRAIN PHASE (Sub-Swarm Hierarchy)
+        # Feed Executive pulse into Meta-Layer
+        let meta_s = MetabrainEngine.integrate_layers(reflect::states(), META_START);
+        reflect::store_states(meta_s);
+        
+        # [PHASE 29] REGIME COMMITMENT
+        # If entropy is stable in a new band for long enough, we shift the Goal Posts.
+        # This creates "Plasticity" of the Governor itself.
+        
+        # Logic: 
+        # If E > 0.6 for 30 ticks -> The system "likes" Chaos. Move Target UP.
+        # If E < 0.3 for 30 ticks -> The system "likes" Order. Move Target DOWN.
+        
+        let target_shift = MetabrainEngine.check_regime_stability(ent);
+        
+        if (target_shift == 0.0) {
+            # No shift
+        }
+        if (target_shift > 0.0) {
+             print(">>> [COMMITMENT] Regime Shift Detected (CHAOS)! Adjusting Target UP by " + target_shift);
+             TARGET_ENTROPY = TARGET_ENTROPY + target_shift;
+        }
+        if (target_shift < 0.0) {
+             print(">>> [COMMITMENT] Regime Shift Detected (ORDER)! Adjusting Target DOWN by " + target_shift);
+             TARGET_ENTROPY = TARGET_ENTROPY + target_shift;
+        }
+        
+        # Clamp Logic outside
+        if (target_shift * target_shift > 0.0) {
+             # Clamp Target
+             if (TARGET_ENTROPY > 0.8) { TARGET_ENTROPY = 0.8; }
+             if (TARGET_ENTROPY < 0.2) { TARGET_ENTROPY = 0.2; }
+             print(">>> [COMMITMENT] New Target Entropy: " + TARGET_ENTROPY);
+        }
+
+        # Meta-Correction: Overseer adjustments
+        # (Assuming we have a way to estimate entropy of a sub-range soon, 
+        # for now we use global E as proxy)
+        let correction = MetabrainEngine.observe_and_correct(ent, 0.2);
+        if (correction > 0.0) {
+            current_vol = correction;
+        }
+
+        # 14. SYMBIOSIS PHASE (Language Acquisition)
+        # Translate the abstraction peak into a human-readable concept
+        let meta_thought = SymbiosisEngine.translate_meta_states(reflect::states(), META_START, META_SIZE);
+        
+        ticks = ticks + 1;
+    }
+    
+    print("--- [EXPERIMENT TERMINATED] ---");
+}
+
+# BOOT
+run_brain_cycle();

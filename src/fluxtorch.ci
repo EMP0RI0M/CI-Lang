@@ -1,0 +1,33 @@
+# FluxTorch.ci: Chaotic Neural Networks in Pure CI-Lang
+# Replaces fluxtorch module logic.
+
+class FluxTorch {
+    # Manual Linear Layer implementation
+    func linear_forward(x, weights, bias, entropy) {
+        # Sample weights with noise scaled by entropy
+        # noise = reflect::noise() * entropy * weights_volatility
+        let noise = reflect::noise();
+        let w_noisy = weights + (noise * 0.1 * entropy);
+        
+        return (x @ w_noisy) + bias;
+    }
+}
+
+class EntropyEngine {
+    func regulate(current_e, target_e) {
+        let diff = current_e - target_e;
+        # Simple proportional control
+        return target_e - (diff * 0.1);
+    }
+}
+
+# Training / Optimization Logic
+func optimize_hebbian(states, p_states, weights, alpha, decay) {
+    # Delta W = alpha * p_states^T @ states
+    # Note: VM @ on (N,) and (N,) might need reshaping or be outer product
+    # For now, let's assume we use explicit matrix update
+    
+    let new_w = weights * decay;
+    # (Vectorized Hebbian Logic would go here)
+    return new_w;
+}

@@ -1,0 +1,5 @@
+n_agents: 200
+name: Edge of Chaos Baseline
+seed: 42
+steps: 1000
+target_e: 0.45

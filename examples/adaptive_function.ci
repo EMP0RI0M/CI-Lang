@@ -1,0 +1,11 @@
+// Adaptive Function in CI-Lang
+func compute(x: int): int {
+    // The 'adapt' directive instructs FluxVM to rewrite 
+    // the function logic based on runtime entropy levels.
+    adapt compute to entropy;
+    
+    return x * 2;
+}
+
+let result = compute(5);
+print("Result of adaptive computation: " + result);

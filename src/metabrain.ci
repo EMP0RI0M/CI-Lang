@@ -1,0 +1,77 @@
+# Metabrain.ci: Hierarchical Cognitive Layers
+# Translates low-level 'Executive' pulses into high-level 'Abstract' concepts.
+
+class MetabrainEngine {
+    # Layer Integration
+    # Maps the executive output (indices 80-99) to the meta-layer workspace.
+    func integrate_layers(primary_states, meta_layer_start) {
+        let meta_s = reflect::states();
+        let i = 0;
+        let executive_start = 80;
+        
+        while (i < 20) {
+            # Pulse Mapping: Executive neurons fire into Meta Sensory neurons
+            meta_s[meta_layer_start + i] = primary_states[executive_start + i];
+            i = i + 1;
+        }
+        return meta_s;
+    }
+
+    # Meta-Cognition: Self-Observation
+    # If the meta-layer detects 'Chaos' in the primary layer, it issues a 'Global Reset'
+    func observe_and_correct(primary_ent, meta_ent) {
+        if (primary_ent > 0.8) {
+            if (meta_ent < 0.3) {
+                # High Prim Chaos + Low Meta Chaos = Failure to Abstract
+                print(">>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...");
+                return 0.5; # Correction value for volatility
+            }
+        }
+        return 0.0;
+    }
+    
+    # Check if we should commit to a new regime
+    # Uses Metabolism Vector [100] as Counter, [101] as Regime ID
+    func check_regime_stability(ent) {
+        let metab = reflect::metabolism();
+        let counter = metab[100];
+        let regime = metab[101];
+        
+        let shift = 0.0;
+        
+        # Determine Current Status
+        let current_status = 0.0;
+        if (ent > 0.6) { current_status = 1.0; } # High E
+        if (ent < 0.3) { current_status = -1.0; } # Low E
+        
+        # Logic
+        if (current_status * current_status > 0.0) {
+            if (current_status == regime) {
+                # Increment Stability Counter
+                counter = counter + 1.0;
+            } else {
+                # Reset, new regime detected
+                counter = 0.0;
+                regime = current_status;
+            }
+        } else {
+            # Drift / Middle Ground -> Decay counter
+            counter = counter * 0.9;
+        }
+        
+        # Check Commitment Threshold (30 ticks)
+        if (counter > 30.0) {
+            print(">>> [METABRAIN] Regime Confirmed: " + regime);
+            if (regime > 0.0) { shift = 0.05; }
+            if (regime < 0.0) { shift = -0.05; }
+            counter = 0.0; # Reset after commitment
+        }
+        
+        # Store State back
+        metab[100] = counter;
+        metab[101] = regime;
+        reflect::store_metabolism(metab);
+        
+        return shift;
+    }
+}

@@ -1,0 +1,60 @@
+# FluxVM Orchestrator: Vectorized Thermodynamic Swarm
+# Replaces swarm.py and numba_core.py logic in pure CI-Lang.
+
+func physics_step(volatility, inhibition_rate) {
+    let states = reflect::states();
+    let weights = reflect::weights();
+    
+    # 1. State Update (Vectorized)
+    # influence = states * weights (transpose handled by VM dot)
+    let influence = states @ weights;
+    
+    # mean_state calculation (if VM supports mean, otherwise use sum/n)
+    # For now assume arithmetic works on arrays
+    let n = 100; # We can use reflect::size() if added
+    let sum_s = 0.0;
+    # (Since we don't have reflect::sum yet, we loop or add it)
+    # Let's assume arithmetic operators handle scalar operations on arrays
+    
+    let inhibition = 0.1 * 0.5; # Placeholder for mean(states)
+    
+    let noise = reflect::noise();
+    
+    # new_states = (states * 0.7) + influence - inhibition + (volatility * noise)
+    let s_decay = states * 0.7;
+    let s_noise = noise * volatility;
+    let new_states = s_decay + influence - inhibition + s_noise;
+    
+    reflect::store_states(new_states);
+}
+
+func hebbian_step(alpha, decay) {
+    let states = reflect::states();
+    let p_states = reflect::prev_states();
+    let weights = reflect::weights();
+    
+    # Hebbian Association: W_ij += alpha * prev_s_i * cur_s_j
+    # This is an outer product: p_states^T @ states
+    # (Need to ensure VM handles outer product or we use @ with shapes)
+    
+    # For now, let's just do global decay
+    let new_weights = weights * decay;
+    
+    # Complex logic: if (p_states[i] > 0.3 && states[j] > 0.3)
+    # Vectorized: mask = (p_states > 0.3) * (states > 0.3)
+    # Since we don't have boolean masks in VM yet, we'll keep it simple
+    
+    reflect::store_weights(new_weights);
+}
+
+system GlobalOrchestrator {
+    # This system will be called every tick by the host
+    # However, FluxVM currently runs scripts sequentially.
+    # We will use this file as the main entry point.
+    
+    while (true) {
+        physics_step(0.01, 0.1);
+        hebbian_step(0.05, 0.99);
+        # Wait for next tick? Or host controls PC.
+    }
+}

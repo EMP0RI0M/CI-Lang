@@ -1,0 +1,56 @@
+# CI-Lang Meta-Core: Asymmetric Hebbian Optimizer (Stage 1)
+# This program replaces the Python-based learning logic.
+
+agent HebbianOptimizer {
+    state {
+        alpha: 0.2,
+        decay: 0.95,
+        i: 0,
+        j: 0,
+        pre_val: 0.0,
+        post_val: 0.0,
+        current_weight: 0.0
+    }
+    volatility = 0.01;
+    
+    update(dt) {
+        # 1. Self-Identification
+        let my_id = reflect::get_id();
+        
+        # 2. Hebbian Check (A was active at t-1)
+        let p_val = reflect::load_prev_s(my_id);
+        
+        if (p_val > 0.3) {
+            # Loop through all agents j
+            let n = 100;
+            let current_j = 0;
+            
+            while (current_j < n) {
+                if (current_j == my_id) {
+                    # Skip self-links
+                } else {
+                    let po_val = reflect::load_s(current_j);
+                    
+                    if (po_val > 0.3) {
+                        # Increment weight W[i, j]
+                        let weight = reflect::load_w(my_id, current_j);
+                        let increment = alpha * p_val * po_val;
+                        let new_w = weight + increment;
+                        reflect::store_w(my_id, current_j, new_w);
+                    }
+                }
+                
+                # Global weight decay
+                let weight_to_decay = reflect::load_w(my_id, current_j);
+                let decayed_w = weight_to_decay * decay;
+                reflect::store_w(my_id, current_j, decayed_w);
+                
+                current_j = current_j + 1;
+            }
+        }
+    }
+}
+
+system LinguisticBrain {
+    spawn HebbianOptimizer size=100;
+}

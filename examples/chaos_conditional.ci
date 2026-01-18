@@ -1,0 +1,15 @@
+// Chaos-Aware Conditional in CI-Lang
+let entropy_level = 0.7;
+
+chaos {
+    // Probabilistic equality ≈ uses the entropy register
+    if (entropy_level ≈ 0.5) {
+        print("High chaos detected! System is fluctuating.");
+    } else {
+        print("Stable execution. Entropy is manageable.");
+    }
+}
+
+// Global entropy measure
+let current_e = entropy::measure();
+print("Current system entropy: " + current_e);

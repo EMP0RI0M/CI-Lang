@@ -1,0 +1,36 @@
+# CI-Lang 2.0: Self-Evolution Demo
+# Purpose: This program uses agents to evolve the language's own 'volatility' rules.
+
+agent SyntaxOptimizer {
+    state fitness = 0.5;
+    volatility vol = 0.1;
+
+    update {
+        # Observe the global entropy (pseudo-readout)
+        LOAD _global_entropy;
+        
+        # If entropy is too high, lower our own volatility influence
+        PUSH 0.7;
+        GT;
+        IF {
+            PUSH -0.05;
+            ADD fitness;
+            STORE fitness;
+        }
+
+        # Use the fitness to propose a new "Language Purpose"
+        LOAD fitness;
+        PUSH 0.9;
+        GT;
+        IF {
+            # Meta-Action: Tell the system this syntax is 'Good'
+            # Here we simulate the purpose shift
+            STABILIZE 100;
+        }
+    }
+}
+
+system LanguageEvolver {
+    # Spawn 10 agents to compete for the "Best Syntax"
+    SPAWN SyntaxOptimizer 10;
+}

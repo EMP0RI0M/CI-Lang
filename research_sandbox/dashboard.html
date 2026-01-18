@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Xaos | Cortex Visualizer</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --panel: #111111;
+            --accent: #00ff41;
+            --text: #e0e0e0;
+        }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: 'JetBrains Mono', monospace; overflow: hidden; }
+        .grid-container { display: grid; grid-template-columns: 300px 1fr; height: 100vh; }
+        .sidebar { background: var(--panel); border-right: 1px solid #333; padding: 20px; display: flex; flex-direction: column; gap: 20px; }
+        .main-view { display: grid; grid-template-rows: 2fr 1fr; padding: 20px; gap: 20px; }
+        
+        .stat-box { background: #1a1a1a; p: 15px; border-left: 3px solid var(--accent); padding: 10px; }
+        .stat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-value { font-size: 1.5rem; font-weight: bold; }
+        
+        #brain-heatmap { width: 100%; height: 100%; background: #000; border: 1px solid #333; }
+        #log-console { height: 100%; overflow-y: auto; background: #050505; border: 1px solid #333; padding: 10px; font-size: 0.9rem; white-space: pre-wrap; font-family: monospace; opacity: 0.8; }
+        
+        .status-badge { padding: 5px 10px; border-radius: 4px; background: #333; text-align: center; font-weight: bold;}
+        .status-chaotic { background: #550000; color: #ff5555; }
+        .status-ordered { background: #005500; color: #55ff55; }
+        .status-stagnant { background: #333333; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <aside class="sidebar">
+            <h2>/// XAOS CORTEX</h2>
+            
+            <div class="stat-box">
+                <div class="stat-label">System Status</div>
+                <div id="sys-status" class="status-badge status-stagnant">OFFLINE</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-label">Entropy (E)</div>
+                <div id="val-entropy" class="stat-value">0.000</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-label">Volatility (V)</div>
+                <div id="val-volatility" class="stat-value">0.000</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-label">Active Concept</div>
+                <div id="val-concept" class="stat-value" style="font-size: 1rem; color: #aaa;">NONE</div>
+            </div>
+
+            <div class="stat-box" style="border-color: #0088ff;">
+                <div class="stat-label">Target Entropy</div>
+                <div id="val-target" class="stat-value">--</div>
+            </div>
+        </aside>
+        
+        <main class="main-view">
+            <div id="brain-heatmap">
+                <!-- Plotly Chart -->
+            </div>
+            <div id="log-console">
+                <span style="color: #666;">Waiting for telemetry stream...</span>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Setup Plotly Heatmap
+        var data = [{
+            z: Array(120).fill().map(() => Array(120).fill(0)),
+            type: 'heatmap',
+            colorscale: 'Viridis',
+            zmin: -0.1,
+            zmax: 0.1,
+            showscale: false
+        }];
+
+        var layout = {
+            title: 'Neural Synaptic Matrix (Weights)',
+            paper_bgcolor: '#000',
+            plot_bgcolor: '#000',
+            font: { color: '#888' },
+            margin: { t: 40, b: 0, l: 0, r: 0 },
+            xaxis: { visible: false },
+            yaxis: { visible: false, scaleanchor: "x" } // Maintain aspect ratio
+        };
+
+        Plotly.newPlot('brain-heatmap', data, layout, {responsive: true});
+
+        // Event Source
+        const eventSource = new EventSource("/stream");
+        
+        eventSource.onmessage = function(event) {
+            const msg = event.data;
+            
+            // 1. Log Update
+            const consoleDiv = document.getElementById("log-console");
+            if (!msg.startsWith("DATA:")) {
+                const line = document.createElement("div");
+                line.textContent = msg;
+                if (msg.includes("MIMO")) { line.style.color = "#00ccff"; }
+                if (msg.includes("COMMITMENT")) { line.style.color = "#ffdd00"; }
+                if (msg.includes("regime")) { line.style.fontWeight = "bold"; }
+                
+                consoleDiv.appendChild(line);
+                consoleDiv.scrollTop = consoleDiv.scrollHeight;
+            }
+
+            // 2. Data Update (Format: DATA: [CI_CORE_STATE] ...)
+            if (msg.includes("DATA:")) {
+                // Parse Status
+                // [CI_CORE_STATE] Status: CHAOTIC | E: 0.77 | V: 0.83
+                try {
+                    const statusMatch = msg.match(/Status: (\w+)/);
+                    const eMatch = msg.match(/E: ([\d\.\-]+)/);
+                    const vMatch = msg.match(/V: ([\d\.\-]+)/);
+                    
+                    if (statusMatch) {
+                        const s = statusMatch[1];
+                        const el = document.getElementById("sys-status");
+                        el.innerText = s;
+                        el.className = "status-badge status-" + s.toLowerCase();
+                    }
+                    if (eMatch) document.getElementById("val-entropy").innerText = parseFloat(eMatch[1]).toFixed(3);
+                    if (vMatch) document.getElementById("val-volatility").innerText = parseFloat(vMatch[1]).toFixed(3);
+                } catch(e) {}
+            }
+            
+            // 3. Matrix Update (We need a separate channel for full matrix, 
+            // for now we simulate visual activity based on Entropy)
+            // Ideally we'd fetch /matrix.json periodically.
+        };
+        
+        // Polling loop for Matrix Data (Visuals)
+        setInterval(async () => {
+            try {
+                const res = await fetch('/matrix_data');
+                const matrix = await res.json();
+                
+                if (matrix && matrix.length > 0) {
+                     Plotly.restyle('brain-heatmap', { z: [matrix] });
+                }
+            } catch(e) {}
+        }, 1000); // 1fps update
+        
+        setInterval(async () => {
+             try {
+                const res = await fetch('/swag_stats');
+                const stats = await res.json();
+                if(stats.target) document.getElementById("val-target").innerText = stats.target.toFixed(2);
+                if(stats.concept) document.getElementById("val-concept").innerText = stats.concept;
+             } catch(e) {}
+        }, 500);
+
+    </script>
+</body>
+</html>

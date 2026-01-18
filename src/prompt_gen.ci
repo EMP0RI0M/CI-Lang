@@ -1,0 +1,90 @@
+# PromptGen.ci: The Linguistic Interface (Vocal Cords)
+# Formats swarm activity into human/LLM-readable prompts.
+
+class LinguisticBridge {
+    func generate_report(thought_id, entropy, vol) {
+        let status = "NORMAL";
+        if (entropy > 0.6) {
+            status = "CHAOTIC";
+        }
+        if (entropy < 0.3) {
+            status = "STAGNANT";
+        }
+
+        # Select Meta-Commentary
+        let msg = "The swarm is processing latent patterns.";
+        if (thought_id == 2) {
+            msg = "Concept [CHAOS] detected. Higher-order disruption active.";
+        }
+        if (thought_id == 5) {
+            msg = "Concept [LOGIC] detected. Structure is crystallizing.";
+        }
+
+        # Build Structured Output
+        let report = "[CI_CORE_STATE] Status: " + status;
+        report = report + " | E: " + entropy;
+        report = report + " | V: " + vol;
+        report = report + "\n[INTERPRETATION] " + msg;
+        
+        return report;
+    }
+
+    func request_llm_insight(report) {
+        # Formatting a specific tag that the Python host can intercept
+        return ">>> LLM_TEACHER_PROMPT: Analyze this swarm transition: " + report;
+    }
+    
+    func process_advice() {
+        let advice = reflect::check_mailbox();
+        if (advice == 0.0) {
+            return 0.0;
+        }
+
+        reflect::clear_mailbox();
+        
+        # LEARNING MODE (2.0 < x < 3.0)
+        # We treat this as a multiplier for plasticity
+        if (advice >= 2.0) {
+            if (advice < 3.0) {
+                let score = advice - 2.0;
+                print(">>> [NEURO_MODULATION] Novelty Signal Received: " + score);
+                return advice; # Return full code to main, let main handle logic
+            }
+        }
+        
+        # COMMAND MODE (>= 10.0)
+        if (advice >= 10.0) {
+            print(">>> [USER_AGENT_INTERFACE] Command Received: " + advice);
+            
+            # CMD 10: RESET
+            # We use 9.9 < x < 10.1 for float safety if needed, but equality usually works for set values
+            if (advice == 10.0) {
+                let s = reflect::states();
+                reflect::store_states(s * 0.0);
+                print(">>> [SYSTEM] States Reset.");
+                return 0.0;
+            }
+            
+            # CMD 11: INJECT CHAOS
+            if (advice == 11.0) {
+                let n = reflect::noise();
+                let s = reflect::states();
+                reflect::store_states(s + (n * 5.0));
+                print(">>> [SYSTEM] Massive Chaos Injection.");
+                return 0.0;
+            }
+            
+            # CMD 12: FREEZE
+            if (advice == 12.0) {
+                print(">>> [SYSTEM] System Frozen.");
+                return 0.001;
+            }
+            
+            return 0.0;
+        }
+        
+        # Advice from host is expected to be a scalar adjustment (e.g. 0.75 for vol)
+        print(">>> [SYZYGY] Received Teacher Input: " + advice);
+        return advice;
+    }
+}

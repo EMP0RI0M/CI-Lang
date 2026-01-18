@@ -1,0 +1,23 @@
+# FluxVM.ci: Standard Library for CI-Lang VM Operations
+# Provides common utilities for swarm management and entropy control.
+
+class Swarm {
+    func reset() {
+        let size = reflect::size();
+        let empty = reflect::noise() * 0.0;
+        reflect::store_states(empty);
+    }
+    
+    func get_energy() {
+        let states = reflect::states();
+        # (Assuming VM handles sum or we add it)
+        return 0.0; # Placeholder
+    }
+}
+
+class Monitor {
+    func log_stats() {
+        let e = reflect::estimate_entropy();
+        print("SYSTEM_ENTROPY: " + e);
+    }
+}

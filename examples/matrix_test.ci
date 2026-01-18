@@ -1,0 +1,7 @@
+let weights = reflect::weights();
+let states = reflect::states();
+let result = states @ weights;
+print(result);
+
+let v = [1.0, 2.0, 3.0];
+print(v + 1.0);

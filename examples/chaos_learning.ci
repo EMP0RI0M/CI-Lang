@@ -1,0 +1,19 @@
+// Chaos Learning Example
+// This program represents a process we want to optimize.
+// High entropy simulates a 'searching' state, while SET_E(0) is 'convergence'.
+
+func complex_process(input) {
+    let base = input * 2;
+    // ⟨ base + 10 ⟩ adds chaotic noise based on current system entropy
+    let noise = ⟨ base + 10 ⟩;
+    return noise;
+}
+
+let start_val = 5;
+let result = complex_process(start_val);
+
+print("Simulation Result:");
+print(result);
+
+// The FluxTorch bridge will observe this 'result' and adjust 'input' or 'entropy' 
+// to reach a target value (e.g., 25.0)

@@ -1,0 +1,41 @@
+# Biology.ci: Physiological Constraints for Chaos Agents
+# Implements metabolism, refractory periods, and homeostatic scaling.
+
+class BiologyEngine {
+    # Metabolism Cycle
+    # Consumption: firing costs energy. Recovery: passive recharge.
+    func handle_metabolism(states, metabolism) {
+        let consumption = states * 0.02;
+        let next_m = metabolism - consumption;
+        
+        # Slower but steadier recovery
+        next_m = next_m + 0.01;
+        
+        # Clamp between 0.0 and 1.0
+        next_m = clip(next_m, 0.1, 1.0); # Prevents total flatlining (min 0.1 energy)
+        return next_m;
+    }
+
+    # Bio-Scaling
+    # An 'exhausted' agent produces a weaker signal.
+    func scale_output(raw_states, metabolism) {
+        # output = scaled by energy
+        let out = raw_states * metabolism;
+        # Biological firing rate is non-negative and has a physical max
+        out = clip(out, -1.0, 2.0); # Allow slight negative for inhibition, but bound it
+        return out; 
+    }
+
+    # Homeostatic Scaling
+    # System-wide normalization of synaptic strengths.
+    func homeostatic_dampening(weights, global_e) {
+        # Tight weight constraints
+        let w = clip(weights, -1.5, 1.5);
+        
+        if (global_e > 0.8) {
+            # Active dampening for chaotic states
+            return w * 0.95;
+        }
+        return w;
+    }
+}

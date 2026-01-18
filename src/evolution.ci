@@ -1,0 +1,43 @@
+# Evolution.ci: Agent Recruitment & Survival of the Fittest
+# Manages the dynamically expanding swarm population.
+
+class EvolutionEngine {
+    # Evaluate Fitness: Find agents that are consistently 'flat' or 'noisy'
+    func calculate_fitness(current_states, prev_states) {
+        # Fitness = Delta Activation (Meaningful change)
+        let delta = current_states - prev_states;
+        # Absolute change proxy
+        let fitness = delta * delta;
+        return fitness;
+    }
+
+    # Selection Phase: Dampen agents with low fitness
+    func select(states, fitness_vec, threshold) {
+        # In a real system, we'd 'kill' agents. 
+        # Here we 'hibernate' them by zeroing their influence.
+        let i = 0;
+        let size = reflect::size();
+        let new_states = states;
+        
+        while (i < size) {
+            if (fitness_vec[i] < threshold) {
+                # Low activity agent detected - hibernate
+                new_states[i] = 0.0;
+            }
+            i = i + 1;
+        }
+        return new_states;
+    }
+
+    # Recruitment Phase: Spawn new agents if system entropy is too low (stagnation)
+    func recruit(current_e, stagnation_threshold) {
+        if (current_e < stagnation_threshold) {
+             print(">>> [EVOLUTION] Stagnation detected. Spawning Support Cluster...");
+             # spawn(type, size) - Triggering the VM's recruitment system
+             # Usage: spawn HelperAgent size=10;
+             # (Note: spawn is a statement, usually handled in systems)
+             return true; 
+        }
+        return false;
+    }
+}

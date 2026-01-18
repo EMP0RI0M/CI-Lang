@@ -1,0 +1,16 @@
+// 1,000 Agent Stability Test
+// This program drives agents to find a consensus value of 50.
+
+func stabilize(target) {
+    let current = 0;
+    // Chaotic loop
+    if (current ≈ target) {
+        return target;
+    } else {
+        // Parentheses now supported
+        return ⟨ current + (target / 2) ⟩;
+    }
+}
+
+// Just calling the function leaves the result on the stack for the Manager
+stabilize(50);

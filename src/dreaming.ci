@@ -1,0 +1,29 @@
+# Dreaming.ci: Offline Memory Consolidation & Latent Optimization
+# Replays previous activations to stabilize chaotic weights.
+
+class DreamingEngine {
+    # Consolidation Cycle
+    # Replays the weighted influence of previous states to reinforce patterns
+    func consolidate(weights, prev_states, learning_rate) {
+        # Offline Hebbian: Delta W = LR * outer(prev_s, prev_s)
+        # This reinforces 'what fired together' in the past
+        
+        # In our VM, we'll simulate this with a vectorized reinforcement
+        # reinforce = (prev_states @ weights) * learning_rate
+        let latent_signal = prev_states @ weights;
+        
+        # Update weights based on latent echoes
+        # (Simplified: just shifting weights toward the latent trace)
+        let w_new = weights + (latent_signal * 0.01);
+        
+        return w_new;
+    }
+
+    # Selective Pruning
+    # Removes 'noisy' weights that don't contribute to stable patterns
+    func prune(weights, threshold) {
+        # This would ideally be: weights * (abs(weights) > threshold)
+        # For now, we'll assume a global dampening for low-value weights
+        return weights * 0.95; 
+    }
+}

@@ -1,0 +1,28 @@
+# Governor.ci: Thermodynamic Control System
+# Replaces controller.py logic.
+
+class Governor {
+    # PID Constants for entropy regulation
+    # target_e: Target entropy (default 0.45)
+    # k_p: Proportional gain
+    # k_i: Integral gain
+    
+    func step(current_e, target_e, integral_error, current_vol) {
+        let error = target_e - current_e;
+        let new_integral = integral_error + error;
+        
+        # adjustment = (0.01 * error) + (0.001 * new_integral)
+        let adjustment = (0.01 * error) + (0.001 * new_integral);
+        let next_vol = current_vol + adjustment;
+        
+        # Clamp volatility to [0.01, 0.9]
+        if (next_vol < 0.01) {
+            next_vol = 0.01;
+        }
+        if (next_vol > 0.9) {
+            next_vol = 0.9;
+        }
+        
+        return [next_vol, new_integral];
+    }
+}
