@@ -1,0 +1,21 @@
+# stdlib/chaos.ci
+# Foundational Algorithms for CI-Lang stabilization
+
+def measure_homeostasis(val, target):
+    # Returns the absolute divergence
+    let diff = val - target
+    if diff < 0:
+        return -diff
+    return diff
+
+def adaptive_gain(lambda, memory):
+    # The core MACS control equation from Spec v1.0
+    # Gain decreases as chaos (lambda) increases, but increases with memory
+    let base_gain = 1.0 - lambda
+    let memory_boost = memory * 0.1
+    return base_gain + memory_boost
+
+def stabilize(current, target, lambda, memory):
+    # High-level homeostatic pull
+    let gain = adaptive_gain(lambda, memory)
+    return current → target

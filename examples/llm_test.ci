@@ -1,0 +1,25 @@
+# llm_test.ci
+# Testing the Linguistic Neuro-Modulation loop with OpenRouter
+
+import "src/prompt_gen.ci";
+
+while (1) {
+    # 1. FORCE CHAOTIC STATE for Experiment
+    let e = 0.92; # High entropy spike
+    
+    # 2. Convert raw metrics to Linguistic Report
+    # Use the static class methods defined in prompt_gen.ci
+    let report = LinguisticBridge.generate_report(2, e, 0.85); # thought_id 2 = CONCEPT [CHAOS]
+    
+    # 3. Request insight (Outputs the >>> LLM_TEACHER_PROMPT tag)
+    let prompt = LinguisticBridge.request_llm_insight(report);
+    print(prompt);
+    
+    # 4. Check for and apply advice from the LLM
+    # process_advice() uses reflect::check_mailbox() and reflect::store_states() etc.
+    let status = LinguisticBridge.process_advice();
+    
+    if (status > 0.0) {
+        print(">>> [LOOP] LLM Feedback Cycle Complete.");
+    }
+}

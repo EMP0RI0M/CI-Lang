@@ -7,6 +7,7 @@ class StabilityMonitor:
     def __init__(self):
         self.history = []
         self.entropy_history = []
+        self.memory_history = []
 
     def estimate_entropy(self, data, bins=20):
         """
@@ -31,16 +32,16 @@ class StabilityMonitor:
         
         return stable_entropy
 
-    def log_step(self, tick, raw_entropy, outputs):
+    def log_step(self, tick, raw_entropy, outputs, memory=0.0):
         """
-        Logs a simulation step. raw_entropy is ignored in favor of 
-        the new stabilized estimator.
+        Logs a simulation step.
         """
         numeric_outputs = [o for o in outputs if isinstance(o, (int, float))]
         if numeric_outputs:
             # Recalculate entropy using the stable estimator
             stable_e = self.estimate_entropy(numeric_outputs)
             self.entropy_history.append(stable_e)
+            self.memory_history.append(memory)
             
             mean = np.mean(numeric_outputs)
             std = np.std(numeric_outputs)
@@ -80,3 +81,7 @@ class StabilityMonitor:
         else:
             print(f"STATUS: FAILED")
         print(f"MESSAGE: {message}")
+        
+        if self.memory_history:
+            print(f"Max Control Memory: {max(self.memory_history):.4f}")
+            print(f"Final Entropy: {self.entropy_history[-1]:.4f}")

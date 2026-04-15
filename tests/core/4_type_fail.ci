@@ -1,0 +1,3 @@
+# tests/core/4_type_fail.ci
+# This must fail at runtime with TypeError
+let err = sin("hello")

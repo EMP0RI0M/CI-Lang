@@ -1,0 +1,16 @@
+# stdlib/agent.ci
+# Foundational Swarm Blueprints
+
+import "chaos.ci";
+
+# A base agent that automatically applies MACS
+def apply_macs(current_val, target_val):
+    let lambda = entropy::measure()
+    # We use a dummy memory of 0 for the base case
+    # Advanced agents should track their own local memory
+    let corrected = stabilize(current_val, target_val, lambda, 0.0)
+    return corrected
+
+# Note: In CI-Lang v1.0, agents are defined at the top level,
+# but these helper functions provide the "Biological Foundation"
+# for their update loops.

@@ -1,0 +1,9 @@
+# tests/core/3_chaos.ci
+let a = 1.0
+let b = 1.005 
+# sensitivity is 0.1, lambda is 0.5
+# threshold = 0.5 * 0.1 = 0.05
+# abs(1.0 - 1.005) = 0.005
+# 0.005 < 0.05 is True
+if a ≈ b:
+    print("PASS")

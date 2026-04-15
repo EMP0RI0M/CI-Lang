@@ -1,0 +1,10 @@
+# tests/stress/industrial_stress.ci
+agent Stress:
+    state:
+        val = 0.0
+    
+    update(dt):
+        val = val → 50.0
+        push val
+        
+spawn Stress size = 1000;

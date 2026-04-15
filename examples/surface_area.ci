@@ -1,0 +1,41 @@
+# examples/surface_area.ci
+# CI-Lang v1.0 Surface Area Demonstration
+# Integrates: std::math, indents, agents, and flow-stabilization
+
+import "math.ci"
+
+agent Sphere:
+    state:
+        radius = 1.0
+        volume = 0.0
+        area   = 0.0
+
+    update(dt):
+        # 1. Theoretical Target
+        let target_v = 100.0
+        
+        # 2. Physics Model: V = (4/3) * pi * r^3
+        # Using the new pow() and pi from stdlib
+        volume = (4.0 / 3.0) * pi * pow(radius, 3.0)
+        
+        # 3. MACS Homeostatic Pull
+        # The agent 'feels' a pull toward the target volume
+        volume = volume → target_v
+        
+        # 4. Inverse Calculation: r = (3V / 4pi)^(1/3)
+        radius = pow((3.0 * volume) / (4.0 * pi), 1.0 / 3.0)
+        
+        # 5. Result Surface Area: A = 4 * pi * r^2
+        area = 4.0 * pi * pow(radius, 2.0)
+        
+        # 6. Report the results
+        push area
+        
+        # Diagnostic Check using Chaos Equality
+        if area ≈ 104.19: # The stable Surface Area for V=100
+            print("STABLE")
+        else:
+            print("RE-CALIBRATING")
+
+# Initialize a swarm of varying radii
+spawn Sphere size = 20;

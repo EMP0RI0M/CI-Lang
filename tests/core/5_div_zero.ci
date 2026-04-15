@@ -1,0 +1,3 @@
+# tests/core/5_div_zero.ci
+# This must fail at runtime with ZeroDivisionError
+let boom = 10 / 0

@@ -1,0 +1,16 @@
+# 5. agent_homeostasis.ci
+# Formal Agent definition in v1.0
+# Encapsulated state with continuous update flow
+
+agent Stabilizer:
+    state:
+        val = 50.0
+    
+    update(dt):
+        # Homeostatic correction
+        let target = 100.0
+        val = val → target
+        push val
+
+# Spawn the swarm
+spawn Stabilizer size = 50;

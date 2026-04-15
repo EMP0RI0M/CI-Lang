@@ -1,0 +1,4 @@
+# tests/core/1_arithmetic.ci
+let x = 10 + 20 * 2
+if x == 50:
+    print("PASS")

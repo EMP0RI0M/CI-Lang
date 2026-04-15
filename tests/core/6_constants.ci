@@ -1,0 +1,5 @@
+# tests/core/6_constants.ci
+let radius = 10.0
+let circumference = 2.0 * PI * radius
+print(circumference)
+# Expected output: ~62.8318...

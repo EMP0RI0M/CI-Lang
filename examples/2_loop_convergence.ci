@@ -1,0 +1,6 @@
+# 2. loop_convergence.ci
+# Proving indentation-based while loops
+let counter = 0
+while counter < 10:
+    counter = counter + 1
+    print(counter)

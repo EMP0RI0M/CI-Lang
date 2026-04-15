@@ -1,4 +1,4 @@
-from fluxvm import FluxVM
+from fluxvm_core import FluxVM
 import time
 import random
 import numpy as np
@@ -6,75 +6,95 @@ import numpy as np
 class SwarmManager:
     """
     Orchestrates thousands of FluxVM agents in a shared environment.
-    Uses 'Shared Volatility' where agents influence a global entropy pool.
+    Uses 'Memory-Augmented Homeostatic Control' to stabilize divergence.
     """
-    def __init__(self, bytecode, agent_count=1000):
+    def __init__(self, bytecode, agent_count=None, seed=None):
         self.bytecode = bytecode
-        self.agent_count = agent_count
-        self.agents = [FluxVM() for _ in range(agent_count)]
-        self.global_entropy = 0.5
+        self.seed = seed
         
-        # Initialize all agents with the same code
-        for agent in self.agents:
-            agent.load_bytecode(bytecode)
-            agent.entropy_register = self.global_entropy
+        # --- Memory-Augmented Control Parameters ---
+        self.global_entropy = 0.5
+        self.memory = 0.0        # M(t)
+        self.gamma = 0.95        # Memory decay
+        self.alpha = 0.1         # Memory increment
+        self.tau = 0.12          # Instability Threshold
+        self.lambda_base = 0.6   # Base Entropy
+        self.k = 0.08            # Control Sensitivity
+        # -------------------------------------------
+        
+        self.agents = [] # List of FluxVM instances
+        
+        # 1. Run "Prime Boot"
+        boot_vm = FluxVM(seed=seed)
+        boot_vm.load_bytecode(bytecode)
+        boot_vm.entropy_register = self.global_entropy
+        boot_vm.run()
+        
+        # 2. Promote Spawned Agents
+        for i, instance in enumerate(boot_vm.spawned_agents):
+            agent_seed = None if self.seed is None else self.seed + i
+            vm = FluxVM(seed=agent_seed)
+            vm.load_bytecode(bytecode)
+            vm.pc = instance.pc
+            vm.entry_pc = instance.entry_pc
+            vm.variables = instance.variables
+            vm.entropy_register = self.global_entropy
+            self.agents.append(vm)
+
+        # Fallback: legacy behavior
+        if not self.agents and agent_count:
+            for i in range(agent_count):
+                agent_seed = None if seed is None else seed + i
+                vm = FluxVM(seed=agent_seed)
+                vm.load_bytecode(bytecode)
+                vm.entropy_register = self.global_entropy
+                self.agents.append(vm)
 
     def step(self):
-        """
-        Executes one 'tick' for all agents using Thermodynamic Chaos rules.
-        Includes FluxVM instruction execution and thermodynamic drift.
-        """
         agent_outputs = []
-        
         for agent in self.agents:
-            # 1. FluxVM Execution (One instruction per tick)
-            if agent.pc < len(agent.code):
+            # 1. Reset PC to entry point and start execution
+            agent.pc = agent.entry_pc
+            agent.running = True
+            
+            # 2. Execute until RET or HALT (One full behavior cycle)
+            while agent.running and agent.pc < len(agent.code):
                 instr = agent.code[agent.pc]
                 agent.pc += 1
                 agent.execute(instr)
             
-            # 2. Thermodynamic Drift
+            # 3. Thermodynamic Drift
             agent.drift()
             
-            # 3. Collect Output
-            if agent.data_stack:
-                agent_outputs.append(agent.data_stack[-1])
+            # 4. Collect Output from the reporting buffer
+            if agent.outputs:
+                agent_outputs.extend(agent.outputs)
+                agent.outputs = []
         
-        # 4. Global Entropy Regulation
+        # Memory-Augmented Entropy Regulation
         if agent_outputs:
-            current_variance = np.var([x for x in agent_outputs if isinstance(x, (int, float))])
-            target_variance = 0.08
-            error = target_variance - current_variance
-            self.global_entropy = max(0.01, min(0.99, self.global_entropy + error * 0.05))
-            
-            # Sync entropy to all agents
-            for agent in self.agents:
-                agent.entropy_register = self.global_entropy
+            numeric_outputs = [x for x in agent_outputs if isinstance(x, (int, float))]
+            if numeric_outputs:
+                divergence = np.var(numeric_outputs)
+                instability_detected = 1.0 if divergence > self.tau else 0.0
+                self.memory = (self.gamma * self.memory) + (self.alpha * instability_detected)
+                
+                new_lambda = self.lambda_base - (self.k * (1.0 + self.memory))
+                self.global_entropy = max(0.01, min(0.95, new_lambda))
+                
+                for agent in self.agents:
+                    agent.entropy_register = self.global_entropy
                 
         return agent_outputs
 
-    def handle_spawns(self, parent_vm):
-        """
-        Checks parent_vm for new agents or templates and initializes the swarm.
-        """
-        # If the parent VM has agent templates, we should use them
-        for name, template in parent_vm.functions.items():
-            if isinstance(template, dict) and 'states' in template:
-                # This is an agent template, not a function
-                pass # Already handled in initialization or dynamic spawn
-
     def run_simulation(self, ticks=100, monitor=None):
-        print(f"Initializing Swarm with {self.agent_count} agents...")
+        print(f"Executing Swarm with {len(self.agents)} active agents...")
         start_time = time.time()
-        
         for t in range(ticks):
             outputs = self.step()
-            
             if monitor:
-                monitor.log_step(t, self.global_entropy, outputs)
-            
-            if t % 10 == 0:
+                monitor.log_step(t, self.global_entropy, outputs, memory=self.memory)
+            if t % 100 == 0:
                 print(f"Tick {t}: Global Entropy={self.global_entropy:.4f}")
-        
         end_time = time.time()
         print(f"Simulation completed in {end_time - start_time:.2f}s")

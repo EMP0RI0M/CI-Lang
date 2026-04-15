@@ -1,0 +1,28 @@
+# consensus.ci
+# MACS (Memory-Augmented Consensus Stabilizer) with Proportional Damping
+
+let target = 1.5;
+let val = 1.5;
+
+while (1) {
+    # 1. External Influence (Jitter)
+    let external = reflect::check_mailbox();
+    if (external > 0.1) {
+        val = external;
+    }
+    
+    # 2. Adaptive Damped Pull
+    # We use the system-level Entropy (lambda) to modulate our 'trust' in the target.
+    let lambda = entropy::measure(); 
+    
+    # High Lambda (Chaos) = Low Gain (Slow correction to prevent oscillation)
+    # Low Lambda (Stability) = High Gain (Fast correction to fix known errors)
+    let gain = 1.0 - lambda;
+    
+    # Proportional control: val = val + gain * error
+    let error = target - val;
+    val = val + (gain * (error * 0.2)); # 0.2 is the base damping factor
+    
+    # 3. Report state
+    push val;
+}

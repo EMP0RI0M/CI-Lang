@@ -1,0 +1,10 @@
+# tests/stress/industrial_10M.ci
+agent Scaler:
+    state:
+        val = 0.0
+    
+    update(dt):
+        val = val → 100.0
+        push val
+
+spawn Scaler size = 10000;

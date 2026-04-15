@@ -1,0 +1,12 @@
+# 3. chaos_equality.ci
+# Chaos-Aware Equality check
+# x ≈ y adapts based on system entropy
+
+let target = 10.0
+let value = 9.95
+
+# This will evaluate to True if system entropy is high enough
+if value ≈ target:
+    print("Chaos-Consistent: Match achieved via tolerance.")
+else:
+    print("Divergence Detected: Strict equality not met.")

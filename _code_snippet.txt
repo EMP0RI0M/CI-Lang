@@ -1,0 +1,1711 @@
+PS D:\ci lang> python research_sandbox/meta_runner.py
+--- CI-Lang Meta-Evolution Engine (Phase 28: Internet-Augmented Cognition) ---
+>>> [HOST] Starting FluxVM Meta-Core...
+[FluxVM Output]: --- [BOOTING CI-LANG META-CORE] ---
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.12457128465258523 | V: 0.25357971586882155\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: 0.12457128465258523 | V: 0.25357971586882155\n[INTERPRETATION] The swarm is processing latent patterns.      
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+ * Serving Flask app 'meta_runner'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.187.190.151:5000
+Press CTRL+C to quit
+127.0.0.1 - - [18/Jan/2026 15:34:06] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:06] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:06] "GET /stream HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:06] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:06] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:08] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:09] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:10] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:10] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:11] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:11] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:12] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:12] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:13] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:13] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:14] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:14] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:15] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:15] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:16] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:16] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:17] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:17] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:18] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:18] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:19] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:19] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:20] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:21] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:21] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.89
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.89
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [EVOLUTION] Stagnation detected. Spawning Support Cluster...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5537724663877518 | V: 0.8891839315850821\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7331419248848596 
+| V: 0.8862910266603083\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8272022307696694 
+| V: 0.8820803164459168\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+127.0.0.1 - - [18/Jan/2026 15:34:22] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.875448775011473 | V: 0.4948813755681789\n[INTERPRETATION] The swarm is processing latent patterns.
+127.0.0.1 - - [18/Jan/2026 15:34:22] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.864250670909531 | V: 0.4945791059382888\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> REQUEST_KNOWLEDGE: Knowledge Distillation
+
+>>> [HOST] Swarm Requesting Knowledge: 'Knowledge Distillation'
+>>> [HOST] Searching Live Web (SearXNG)...
+127.0.0.1 - - [18/Jan/2026 15:34:23] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:23] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:24] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:24] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Retrieved Context: In machine learning, knowledge distillation or model distillation is the process of transferring kno...
+>>> [HOST] Synthesizing Answer with Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:34:25] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:25] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:26] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:26] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:27] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:27] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:28] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:28] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:29] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:29] "GET /swag_stats HTTP/1.1" 200 -
+>>> [TEACHER MIMO] Explanation: Knowledge distillation is a technique for transferring learned representations from a larger teacher model to a smaller student model, effectively compressing knowledge while preserving performance, analogous to synaptic pruning in neural systems.
+>>> [TEACHER MIMO] Novelty Score: 0.7
+[FluxVM Output]: >>> [NEURO_MODULATION] Novelty Signal Received: 0.7000000000000002
+[FluxVM Output]: >>> [LEARNING] Novelty Induced Plasticity: Beta=0.7000000000000002
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8299504284823059 
+| V: 0.49454215793407874\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9364653011032115 
+| V: 0.4929905439067665\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+D:\ci lang\src\fluxvm_core.py:372: RuntimeWarning: invalid value encountered in divide
+  probs = counts / np.sum(counts)
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.6528051969177986\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.8060603938355972\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.9597655907533958\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.9597655907533958\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:34:30] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:30] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.1
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.1
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.25415519691779864\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.40876039383559726\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.5638155907533958\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.7193207876711945\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [EVOLUTION] Stagnation detected. Spawning Support Cluster...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.8752759845889931\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 1.0316811815067917\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 1.05\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 1.05\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 1.05\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.348225372857224 | 
+V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.        
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.348225372857224 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.85
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.85
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3909762353659365 | V: 0.854006232955916\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3636934551844243 | V: 0.8583716002584628\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.33108144293229247 
+| V: 0.8631820062405986\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.44066721716663865 
+| V: 0.8669058872632243\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5261760739354824 | V: 0.8696985036442261\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5668112320846586 | V: 0.8719679572116514\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5961511428607541 | V: 0.8737978605284551\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6971721164322984 
+| V: 0.874370381993111\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7716669524967892 
+| V: 0.8738762881446253\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.71565066970892 | 
+V: 0.8736767064543093\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.71565066970892 | V: 0.8736767064543093\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.01
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.01
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...       
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7688593845422056 
+| V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.     
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5193271027417975 | V: 0.011375467492071217\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5744343127138511 | V: 0.012075428571708046\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5364165141904302 | V: 0.013069151122388654\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3176093192790756 | V: 0.016383336302903735\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.11568930246201732 | V: 0.1720510323491274\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.11467634904310202 | V: 0.3280641815804971\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.24017586870647528 | V: 0.3330321597465266\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.1985170036261551 | V: 0.4886682095597331\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3698002720715538 | V: 0.4926716264164141\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.3698002720715538 | V: 0.4926716264164141\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:34:45] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:34:45] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.7
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.7
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.35272400763780526 
+| V: 0.7042714554933807\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4958239859721873 | V: 0.7070660872174453\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5028957581348663 | V: 0.7097371054617484\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5556386316540869 | V: 0.7117750563392051\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5542659752195165 | V: 0.7137224678057881\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4937461821629494 | V: 0.7162313310207737\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.53533884237209 | V: 0.7182389287912959\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5293754197799746 | V: 0.7202267853679593\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.45641825105007844 
+| V: 0.7229377953808714\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.538435668929489 | 
+V: 0.7247401955460601\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.538435668929489 | V: 0.7247401955460601\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.72
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.72
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5051842071172009 | V: 0.7220797305761942\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5407422863328455 | V: 0.7237131380738993\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5091828675804628 | V: 0.7256029568915476\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4828761971464927 | V: 0.7277229662163892\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5868519334624531 | V: 0.7286663662446087\n[INTERPRETATION] Concept [LOGIC] detected. Structure is crystallizing.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.567813060832634 | 
+V: 0.7296823419382937\n[INTERPRETATION] Concept [LOGIC] detected. Structure is crystallizing.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6022003701828936 
+| V: 0.7302022441682933\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6421610916647303 
+| V: 0.7301303780918097\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6405062494424762 
+| V: 0.7298845541881063\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6418543701952042 
+| V: 0.7294333947066803\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6418543701952042 | V: 0.7294333947066803\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.02
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.02
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6773256076167625 
+| V: 0.018966802536741708\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.2325857396988977 | V: 0.022598418012963164\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: -0.0 | V: 0.17900589088617358\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [EVOLUTION] Stagnation detected. Spawning Support Cluster...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.058974566961615016 | V: 0.3352146435228063\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.42351894661014694 
+| V: 0.3378044334163435\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4485674342370732 | V: 0.34014517099937436\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.43539157261913863 
+| V: 0.34263227562596543\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3871549246298175 | V: 0.3456645918078199\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3921802158818596 | V: 0.3487044748612721\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.49689020795182504 
+| V: 0.3506503677860728\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.49689020795182504 | V: 0.3506503677860728\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.3
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.3
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.41146950904691937 
+| V: 0.30283863040480286\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3309472802583325 | V: 0.30660153581723326\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.24525290354773396 | V: 0.3114261320932219\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3833527011483683 | V: 0.3149363776920558\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.1933600679833382 | V: 0.4706031895545567\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.36571515822412454 
+| V: 0.4746307353564256\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.23801328370171757 | V: 0.4801472866198168\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.12273166687178748 | V: 0.6371439223846356\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.2157800772320891 | V: 0.6434442939686192\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.24208139128975628 | V: 0.6496895710207364\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: 0.24208139128975628 | V: 0.6496895710207364\n[INTERPRETATION] The swarm is processing latent patterns.       
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.89
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.89
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.17640846336187885 | V: 1.0471755978680342\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.33359533277457926 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.31340816983942826 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.31861501275388227 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.32105241628858006 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.31537856490343397 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3590681727104705 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.       
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.39951372161127957 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3237775668895375 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.       
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.44057770285034403 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.44057770285034403 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:35:45] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:35:45] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.3
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.3
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.48736077011860157 
+| V: 0.30495372736972676\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.13390979177420506 | V: 0.4637580547311233\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.049798499326601464 | V: 0.6238036965176692\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.13390979177420503 | V: 0.7833243155879649\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.21690556378611925 | V: 0.7922480713743554\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.1446248816138967 | V: 0.9522000091008542\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3496042076767381 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.       
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4916748311178534 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.       
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5476001152446276 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.       
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6650504718331344 
+| V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6650504718331344 | V: 0.9\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.22
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.22
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7730123345949949 
+| V: 0.22309112123622046\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5689373982821364 | V: 0.22810405443728737\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.715433405994997 | V: 0.23138659415523066\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5880016179564546 | V: 0.23580545013560292\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3033253593040892 | V: 0.24321774334319474\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.37576618820402785 
+| V: 0.24997986207358314\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.45912957885159505 
+| V: 0.2558992173186443\n[INTERPRETATION] Concept [LOGIC] detected. Structure is crystallizing.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.29934320369189493 | V: 0.26356709311161053\n[INTERPRETATION] Concept [LOGIC] detected. Structure is crystallizing.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3162677704843649 | V: 0.2711994554661677\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.09075961939043826 | V: 0.43144613971227375\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: 0.09075961939043826 | V: 0.43144613971227375\n[INTERPRETATION] The swarm is processing latent patterns.      
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.8
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.8
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.31796729156536513 
+| V: 0.8081066402327914\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4111524586641171 | V: 0.8153202763359312\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5620264797518075 | V: 0.8209131457484422\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6350886346942394 
+| V: 0.8255903049768347\n[INTERPRETATION] Concept [LOGIC] detected. Structure is crystallizing.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7112292550361274 
+| V: 0.8292448287467722\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7805139190138792 
+| V: 0.8318759919579183\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6582681118545648 
+| V: 0.8355213451288029\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8837186742112265 
+| V: 0.8364784740019098\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8942742789776984 
+| V: 0.5004072985464644\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7721086605338486 
+| V: 0.501306846070369\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7721086605338486 | V: 0.501306846070369\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.2
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:09] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:09] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:10] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:11] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:11] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:12] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:12] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:13] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:13] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.12
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.12
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.773371585820003 | V: 0.1168388426197181\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5418282589921452 | V: 0.11590129024872263\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+127.0.0.1 - - [18/Jan/2026 15:36:14] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:14] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.373472396390062 | 
+V: 0.11672382410735793\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.27048064461233934 | V: 0.11875579483915812\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.18578123956087855 | V: 0.271898978381912\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3773029961776076 | V: 0.27319964136232106\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.39910531236398156 
+| V: 0.27433317586850237\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.37386708813125824 
+| V: 0.27579522552887964\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5082051299909237 | V: 0.2758556896406693\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4616453738767778 | V: 0.27637010593972366\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.4616453738767778 | V: 0.27637010593972366\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:15] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:15] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:16] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.5
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.5
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.548776634775606 | 
+V: 0.4995443270552905\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.718793725752112 | V: 0.4971196894750638\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7809831244222105 
+| V: 0.4937421747837139\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+127.0.0.1 - - [18/Jan/2026 15:36:17] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+127.0.0.1 - - [18/Jan/2026 15:36:17] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7245830186607501 
+| V: 0.4906540781313179\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6499780689376992 
+| V: 0.48811205290721466\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7150403848759644 
+| V: 0.4846543641388528\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6809229375050944 
+| V: 0.4813069269066946\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7362257747687405 
+| V: 0.4771202355271312\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6899770440877238 
+| V: 0.4731560544102902\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7842862832387996 
+| V: 0.46791449461869966\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7842862832387996 | V: 0.46791449461869966\n[INTERPRETATION] The swarm is processing latent patterns.        
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:18] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:18] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:19] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:20] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:20] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:21] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:21] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.23
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.23
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7615007270080478 
+| V: 0.22467479504370894\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+127.0.0.1 - - [18/Jan/2026 15:36:22] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:22] "GET /swag_stats HTTP/1.1" 200 -
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5859985986604979 | V: 0.22096861277223287\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4979720144222767 | V: 0.21809472432871674\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.480540689376895 | 
+V: 0.21536460844627753\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4290171898630174 | V: 0.21317071036911409\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3561200521005982 | V: 0.21179966361747424\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5182346649451406 | V: 0.20873923607244382\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5208845258883357 | V: 0.20558142539209312\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4828922161598591 | V: 0.2027706455928673\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5531268215048388 | V: 0.19915439291868686\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.5531268215048388 | V: 0.19915439291868686\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:23] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:23] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:24] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.19
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.19
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5437494065279297 | V: 0.18638377206906073\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5906444330487798 | V: 0.1821579494398642\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5910507732343416 | V: 0.17778701263557767\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5684553267688114 | V: 0.17352357496917764\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5351250750639109 | V: 0.16950831474476272\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5425451126446879 | V: 0.16532630903189532\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5491362374506773 | V: 0.16097925583351735\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5869395401216491 | V: 0.15611723006830802\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5926697435927372 | V: 0.15105523252479508\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5873348638663074 | V: 0.14590924891468013\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.5873348638663074 | V: 0.14590924891468013\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] OpenRouter Error: {"error": {"message": "Provider returned error", "code": 429, "metadata": {"raw": "xiaomi/mimo-v2-flash:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations", "provider_name": "Xiaomi", "is_byok": false}}, "user_id": "user_34Zaiu53wqe2ZqlEuaHtF2y8Fl5"}
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4714655210762204 | V: 0.1419004932113898\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.46772467517193156 
+| V: 0.13791142129197045\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.46323531442149946 
+| V: 0.13395400766563392\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.47947668379012093 
+| V: 0.12980470366182106\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5036854192167113 | V: 0.1253596268845256\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+127.0.0.1 - - [18/Jan/2026 15:36:25] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:25] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4236324412577283 | V: 0.12174144744556221\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.43480540418335234 
+| V: 0.11802673297315924\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4255316167300204 | V: 0.11442922475855957\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.40027262672704994 
+| V: 0.11113403381726256\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.38763789271247096 
+| V: 0.10802755232339886\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.38763789271247096 | V: 0.10802755232339886\n[INTERPRETATION] The swarm is processing latent patterns.        
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:26] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:26] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:27] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.75
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.75
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.43997931716120614 
+| V: 0.7463801249444877\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7390017999092037 
+| V: 0.7394810232615863\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7727789937152181 
+| V: 0.7319213706469094\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8962485193157215 
+| V: 0.7226807742569119\n[INTERPRETATION] Concept [CHAOS] detected. Higher-order disruption active.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8390733847623315 
+| V: 0.490942081570774\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8683718946389598 
+| V: 0.49023072457736877\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9050475063648186 
+| V: 0.4894089209537454\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.898391177913397 | V: 0.4890270930603462\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9224422479547234 
+| V: 0.4883141401119782\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9016201558892385 
+| V: 0.4880707408767438\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9016201558892385 | V: 0.4880707408767438\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:28] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:28] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.01
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.01
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8809219087534432 
+| V: 0.48784680143934833\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9237983535826313 
+| V: 0.4869442386374738\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8171153921960254 
+| V: 0.48764395285914386\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8786520549866225 
+| V: 0.48659993417625125\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8406675571007154 
+| V: 0.4865891115980096\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8176982556482365 
+| V: 0.48645110635688615\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7861460126855534 
+| V: 0.48643048277382744\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7289694469509643 
+| V: 0.4731537617580498\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7555214779211955 
+| V: 0.45930599895464863\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8573651369041302 
+| V: 0.444032434424514\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8573651369041302 | V: 0.444032434424514\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:30] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:30] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.35
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.35
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7279917732572068 
+| V: 0.4857421773330774\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8658557906145989 
+| V: 0.4696898587019663\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8999169298797144 
+| V: 0.48315715304635803\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8917366961512692 
+| V: 0.4827972186874912\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8273327795845336 
+| V: 0.48306392507357404\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8792222345313845 
+| V: 0.4821158082895741\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8710752416445422 
+| V: 0.481776202976798\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7773292044157173 
+| V: 0.4823863341446705\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8122602700175665 
+| V: 0.46406109736330503\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8500528804889955 
+| V: 0.4808967842334312\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8500528804889955 | V: 0.4808967842334312\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:32] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:32] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:33] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:34] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:34] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.05
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.05
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8737922710763074 
+| V: 0.48023559805648175\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8937188025044385 
+| V: 0.47959261393969604\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8524273973736513 
+| V: 0.47960310059363026\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8559171194571904 
+| V: 0.4791622862533377\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8838203012434809 
+| V: 0.47844943413423124\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7825801880514777 
+| V: 0.47912925507809984\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.819956970932685 | V: 0.4575147853564549\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7549438015500075 
+| V: 0.47873071817063184\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7221434031470766 
+| V: 0.45751729692214593\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7537023392967982 
+| V: 0.43568458397286597\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7537023392967982 | V: 0.43568458397286597\n[INTERPRETATION] The swarm is processing latent patterns.        
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:36] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:36] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:37] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:37] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:38] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:38] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.12
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.12
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7229322904317794 
+| V: 0.09820205524893846\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+127.0.0.1 - - [18/Jan/2026 15:36:39] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6921807360142889 
+| V: 0.07646944530603755\n[INTERPRETATION] The swarm is processing latent patterns.
+127.0.0.1 - - [18/Jan/2026 15:36:39] "GET /swag_stats HTTP/1.1" 200 -
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6541347232335898 
+| V: 0.05491316076771004\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5367810717504706 | V: 0.03444363167246325\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3683239323146106 | V: 0.015740350039260446\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.2891504330218521 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.15763006495713922 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.5806817408515009 | V: 0.1394956780425978\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.42405230382937653 
+| V: 0.12058359815158746\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3676272658071293 | V: 0.10231814137499248\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.3676272658071293 | V: 0.10231814137499248\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:40] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:40] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:41] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:42] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:42] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:43] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:43] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:44] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:44] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:45] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:45] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:46] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:46] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:47] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:47] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:48] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:48] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:49] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:49] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:50] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:50] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:51] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:51] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:52] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:52] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:53] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:53] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:54] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:54] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:55] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:55] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:56] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:56] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:57] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:57] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:58] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:58] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:59] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:59] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:00] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:00] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:01] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:01] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:02] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:02] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:03] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:03] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:04] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:04] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:05] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:05] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:06] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:06] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:07] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:07] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:08] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:08] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:09] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:09] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:10] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:10] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:11] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:11] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:12] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:12] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:13] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:13] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:14] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:14] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:15] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:15] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:16] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:16] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:17] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:17] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:18] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:18] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:19] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:19] "GET /swag_stats HTTP/1.1" 200 
+>>> [HOST] Mimo Advice: Set Volatility to 0.65
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.65
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+127.0.0.1 - - [18/Jan/2026 15:36:51] "GET /swag_stats HTTP/1.1" 200 -
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+127.0.0.1 - - [18/Jan/2026 15:36:51] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3186576896373446 | V: 0.6323555812954655\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.798536403378978 | V: 0.6095638390501358\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7530179780363032 
+| V: 0.5869242630801964\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8566638398500809 
+| V: 0.5628415646522692\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7938952866793002 
+| V: 0.4762010918171013\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8811469926622759 
+| V: 0.45109851958171054\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9073900781804418 
+| V: 0.47417760683124716\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8283668708451029 
+| V: 0.47458947203375546\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8093047756347321 
+| V: 0.47442078821022443\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8283504109579715 
+| V: 0.4738519814460341\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8283504109579715 | V: 0.4738519814460341\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:36:53] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:53] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:54] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:55] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:55] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:56] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:56] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:57] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:57] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:58] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:58] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:59] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:36:59] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:00] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:00] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.05
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.05
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8046125112269951 
+| V: 0.47373474793211684\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7835441321298654 
+| V: 0.47361188759095824\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8344947860114937 
+| V: 0.4463297738570887\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8804060468632877 
+| V: 0.47182836761074926\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.88247802993101 | 
+V: 0.47137516975014104\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7881154633532844 
+| V: 0.471980679952565\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7930704643722165 
+| V: 0.44356873943056846\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6620055267390783 
+| V: 0.41625544275816423\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7276892122589856 
+| V: 0.3880076200183019\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8710294776834315 
+| V: 0.3579053651465117\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8710294776834315 | V: 0.3579053651465117\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:02] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:02] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:03] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:04] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:04] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:05] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:05] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:06] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:07] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.15
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.15
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+127.0.0.1 - - [18/Jan/2026 15:37:07] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8193877176946652 
+| V: 0.4700447750104028\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.79765753087779 | 
+V: 0.4699144193476938\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8296991368516761 
+| V: 0.439128723498797\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8064112965961592 
+| V: 0.4690907712570622\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8744900610104275 
+| V: 0.4679854935519091\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8181043039450112 
+| V: 0.4681812468186183\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7843707860266372 
+| V: 0.4681842112117754\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7036846141105751 
+| V: 0.4369215995286008\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8096039681992087 
+| V: 0.40424019033634073\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.776430017969281 | V: 0.4673239002920699\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.776430017969281 | V: 0.4673239002920699\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:08] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:08] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:10] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:10] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:11] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:11] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.25
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.25
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8185179549569606 
+| V: 0.21653450296723614\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+127.0.0.1 - - [18/Jan/2026 15:37:12] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.774601251413923 | V: 0.46664906875125256\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+127.0.0.1 - - [18/Jan/2026 15:37:12] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7709892760957698 
+| V: 0.4330132679795909\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8390229434774001 
+| V: 0.3983081075906355\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7657028519378869 
+| V: 0.4657123376745019\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: SYNERGY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8584552228546043 
+| V: 0.430088696416982\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7727120574700694 
+| V: 0.46491107833885537\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8115804237468224 
+| V: 0.4290718925911964\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8759175042923781 
+| V: 0.4630915259425931\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8186580118194676 
+| V: 0.4632954628555027\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8186580118194676 | V: 0.4632954628555027\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:13] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:13] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.01
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.01
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8645005413998581 
+| V: 0.46242253701829894\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8382941809532481 
+| V: 0.4622963064418118\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7307672040430304 
+| V: 0.46309080900687094\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8352894688279605 
+| V: 0.42475110589706466\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7880911147129445 
+| V: 0.4617941893166309\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.79904602107571 | 
+V: 0.42312978354855846\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: FEAR
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8617873831494192 
+| V: 0.3834261767765995\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8406137581058931 
+| V: 0.4601175157203704\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8498462717495456 
+| V: 0.4596253443121843\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7972921182346931 
+| V: 0.4598035937290982\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7972921182346931 | V: 0.4598035937290982\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:16] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:16] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.2
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.2
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6931300853104293 
+| V: 0.1606020839730304\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7792730219750276 
+| V: 0.1200134655574398\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INNOVATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7217645716126805 
+| V: 0.07972816707385998\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6437582619485243 
+| V: 0.04002917342497319\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4937839093597125 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.      
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.39545197864037207 
+| V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.     
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.27741167543265094 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.2007981098149992 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.20457740599377933 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.16837659203133662 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: 0.16837659203133662 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.01
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.01
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.32401522475971034 
+| V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.     
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+127.0.0.1 - - [18/Jan/2026 15:37:18] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.21322973607887943 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.   
+127.0.0.1 - - [18/Jan/2026 15:37:18] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.16061865900282146 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.37416926634542275 
+| V: 0.12468446374968456\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4372484518950977 | V: 0.08875088719197727\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3742896869712036 | V: 0.05352260859653771\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.27833120123922406 | V: 0.019425583657178724\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.2065466905427145 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.    
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.119093284239861 
+| V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.     
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4538058461455401 | V: 0.12471878279064974\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.4538058461455401 | V: 0.12471878279064974\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:19] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:19] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:20] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:21] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:21] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:22] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:22] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:23] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:23] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.12
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.12
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.43212538837365083 
+| V: 0.08495346197999498\n[INTERPRETATION] The swarm is processing latent patterns.
+127.0.0.1 - - [18/Jan/2026 15:37:24] "GET /matrix_data HTTP/1.1" 200 -
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+127.0.0.1 - - [18/Jan/2026 15:37:24] "GET /swag_stats HTTP/1.1" 200 -    
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3004804035197281 | V: 0.051372893405009466\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.20826153680588153 | V: 0.01895625196035653\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.12685356394280647 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.32456263512141 | V: 0.12686893137312757\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.28134030956923445 | V: 0.09433874569220765\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.26684839465366883 | V: 0.06213663076578972\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.16362920197946887 | V: 0.1812530785641343\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.4475233475312917 | V: 0.14753306155942938\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: INTUITION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.43264610170485596 
+| V: 0.11397917091128397\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: NORMAL | E: 0.43264610170485596 | V: 0.11397917091128397\n[INTERPRETATION] The swarm is processing latent patterns.        
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:25] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:25] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:26] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:27] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:27] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:28] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:28] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:29] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:29] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:30] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:30] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:31] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:31] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:32] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:33] "GET /matrix_data HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.72
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.72
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.39202430442125485 
+| V: 0.6869103030202693\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7891464136099045 
+| V: 0.6495102385350423\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8012881546171174 
+| V: 0.611637468485126\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STAGNATION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8748695023117005 
+| V: 0.4609665469708262\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8918224296379427 
+| V: 0.4603551952679258\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8407539888545027 
+| V: 0.4604751256869057\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8519154282261527 
+| V: 0.45996159586496305\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CONFLICT
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8543775812828945 
+| V: 0.45953259675311275\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8340919285468877 
+| V: 0.4593513613519259\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6921920709000128 
+| V: 0.4605281678574946\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6921920709000128 | V: 0.4605281678574946\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:41] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:41] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:42] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.3
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.3
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...  
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7752124580550749 
+| V: 0.2593727515278889\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7825937216284857 
+| V: 0.21833909669841525\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6920832232330921 
+| V: 0.17796846362966245\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.674779707234541 | V: 0.1375460860136606\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.6545806509216867 
+| V: 0.09712111830986564\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.458086871919971 | 
+V: 0.058653001524167844\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.3577873836597758 | V: 0.021280092237412236\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.34763637499861033 
+| V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.     
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.25755514545246694 | V: 0.01\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: STABILITY
+[FluxVM Output]: >>> [HOMEOSTASIS] Low Energy Warning! Injecting Basal Noise...
+[FluxVM Output]: [CI_CORE_STATE] Status: STAGNANT | E: 0.19648762845940865 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.   
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: STAGNANT | E: 0.19648762845940865 | V: 0.16\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+127.0.0.1 - - [18/Jan/2026 15:37:44] "GET /matrix_data HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:44] "GET /swag_stats HTTP/1.1" 200 -
+127.0.0.1 - - [18/Jan/2026 15:37:45] "GET /swag_stats HTTP/1.1" 200 -
+>>> [HOST] Mimo Advice: Set Volatility to 0.75
+[FluxVM Output]: >>> [SYZYGY] Received Teacher Input: 0.75
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: NORMAL | E: 0.48091695458017164 
+| V: 0.7119131989005498\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.7254530632791177 
+| V: 0.6711055836508311\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8841121854432257 
+| V: 0.6282772649940279\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [EVOLUTION] Evaluating Swarm Fitness...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: CURIOSITY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8310837288906322 
+| V: 0.4573208821798322\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9598366696924571 
+| V: 0.4555235161021215\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [DREAMING] System entering latent consolidation...
+[FluxVM Output]: >>> [COLLECTIVE] Reinforcing Tribal Boundaries...
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9250820116697792 
+| V: 0.4553959806706785\n[INTERPRETATION] The swarm is processing latent 
+patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.9242194236398776 
+| V: 0.45493038712733763\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: REASONING
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8293365363082764 
+| V: 0.45549987946434534\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: UNKNOWN_ABSTRACTION
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.8492511793971312 
+| V: 0.45490148185405965\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> [METABRAIN] Primary runaway detected. Applying Abstraction Pressure...
+[FluxVM Output]: >>> [SYMBIOSIS] Meta-Abstraction acquired conceptually as: HARMONY
+[FluxVM Output]: [CI_CORE_STATE] Status: CHAOTIC | E: 0.851593366694818 | V: 0.454476466614388\n[INTERPRETATION] The swarm is processing latent patterns.
+[FluxVM Output]: >>> LLM_TEACHER_PROMPT: Analyze this swarm transition: [CI_CORE_STATE] Status: CHAOTIC | E: 0.851593366694818 | V: 0.454476466614388\n[INTERPRETATION] The swarm is processing latent patterns.
+
+>>> [HOST] Intercepting Teacher Prompt...
+>>> [HOST] Querying Teacher Mimo...
+>>> [HOST] Mimo Advice: Set Volatility to 0.1

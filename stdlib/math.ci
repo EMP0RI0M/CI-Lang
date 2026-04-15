@@ -1,0 +1,38 @@
+# stdlib/math.ci
+# Complete Mathematical Foundation for CI-Lang v1.0
+
+# Constants
+let pi = 3.141592653589793
+let e  = 2.718281828459045
+let tau = 6.283185307179586
+
+# Trigonometry (Intrinsic Overloads)
+def sin(x): return sin(x)
+def cos(x): return cos(x)
+def tan(x): return tan(x)
+
+# Power & Logs
+def pow(base, exp): return pow(base, exp)
+def log(x): return log(x)
+def log10(x): return log10(x)
+def sqrt(x): return sqrt(x)
+def exp(x): return exp(x)
+
+# Rounding
+def ceil(x): return ceil(x)
+def floor(x): return floor(x)
+def round(x): return round(x)
+
+# Utilities
+def abs(x):
+    if x < 0.0: return -x
+    return x
+
+def clamp(val, low, high):
+    if val < low: return low
+    if val > high: return high
+    return val
+
+def lerp(a, b, t):
+    # Linear Interpolation
+    return a + (b - a) * t

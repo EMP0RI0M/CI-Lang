@@ -1,24 +1,36 @@
+import argparse
+import pickle
+import sys
+import os
 from swarms.engine import SwarmManager
 from swarms.monitor import StabilityMonitor
-import pickle
-import os
 
-def run_swarm_test():
-    # Load compiled bytecode
-    bc_path = os.path.join(os.path.dirname(__file__), "..", "stability_test.bc")
-    with open(bc_path, 'rb') as f:
-        bytecode = pickle.load(f)
+def main():
+    parser = argparse.ArgumentParser(description="CI-Lang Swarm Executor")
+    parser.add_argument("--bytecode", type=str, required=True, help="Path to compiled .bc file")
+    parser.add_argument("--steps", type=int, default=100, help="Number of simulation ticks")
+    parser.add_argument("--agents", type=int, default=10, help="Number of agents in swarm")
     
-    # 1. Initialize Swarm with 1,000 agents
-    manager = SwarmManager(bytecode, agent_count=1000)
-    monitor = StabilityMonitor()
+    args = parser.parse_args()
     
-    # 2. Run simulation for 100 ticks
-    print("--- CI-Lang Swarm Stability Test ---")
-    manager.run_simulation(ticks=100, monitor=monitor)
-    
-    # 3. Verify and Report
-    monitor.report()
+    if not os.path.exists(args.bytecode):
+        print(f"Error: Bytecode file not found: {args.bytecode}")
+        sys.exit(1)
+        
+    try:
+        with open(args.bytecode, 'rb') as f:
+            bytecode = pickle.load(f)
+            
+        manager = SwarmManager(bytecode, agent_count=args.agents)
+        monitor = StabilityMonitor()
+        
+        print(f"--- CI-Lang Swarm Execution: {os.path.basename(args.bytecode)} ---")
+        manager.run_simulation(ticks=args.steps, monitor=monitor)
+        # monitor.report() # Optional for internal tests
+        
+    except Exception as e:
+        print(f"RUNTIME CRASH: {e}", file=sys.stderr)
+        sys.exit(1)
 
 if __name__ == "__main__":
-    run_swarm_test()
+    main()

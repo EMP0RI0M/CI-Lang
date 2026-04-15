@@ -1,0 +1,15 @@
+# pythonic_test.ci
+# Testing the new Bimodal (Pythonic) Syntax
+
+def adjust(val):
+    # Uses the Chaos operator inside a Pythonic 'def'
+    if val ≈ 5.0:
+        return 5.0
+    return val + 0.05
+
+var current_val = 1.0
+
+# Pythonic while loop (no parens, uses colon + indent)
+while current_val < 10.0:
+    current_val = adjust(current_val)
+    push current_val

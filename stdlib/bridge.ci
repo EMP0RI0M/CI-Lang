@@ -1,0 +1,18 @@
+# stdlib/bridge.ci
+# Linguistic Neuro-Modulation Foundation
+
+def consult_teacher():
+    # Check if the host/LLM has sent a stability advisory
+    let advice = reflect::check_mailbox()
+    return advice
+
+def clear_channel():
+    reflect::clear_mailbox()
+
+def report_state(id, val, entropy):
+    # This pushes a state packet that the monitor uses to 
+    # build the prompt for OpenRouterBridge
+    print("AGENT_STATUS")
+    print(id)
+    print(val)
+    print(entropy)

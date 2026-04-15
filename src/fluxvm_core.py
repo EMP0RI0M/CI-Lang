@@ -11,28 +11,39 @@ class MemoryCell:
         self.volatility = volatility
 
 class AgentInstance:
-    __slots__ = ['id', 'template_name', 'variables', 'pc', 'volatility']
+    __slots__ = ['id', 'template_name', 'variables', 'pc', 'entry_pc', 'volatility']
     def __init__(self, id, template_name, variables, pc, volatility):
         self.id = id
         self.template_name = template_name
         self.variables = variables # dict of name -> MemoryCell
         self.pc = pc
+        self.entry_pc = pc
         self.volatility = volatility
 
 class FluxVM:
-    __slots__ = ['data_stack', 'chaos_stack', 'entropy_register', 'pc', 'code', 'running', 'variables', 'call_stack', 'functions', 'checkpoints', 'weights', 'states', 'prev_states', 'agent_id', 'spawned_agents', 'mailbox', 'print_callback', 'metabolism']
+    __slots__ = ['data_stack', 'chaos_stack', 'entropy_register', 'pc', 'code', 'running', 'variables', 'call_stack', 'functions', 'checkpoints', 'weights', 'states', 'prev_states', 'agent_id', 'spawned_agents', 'mailbox', 'print_callback', 'metabolism', 'outputs', 'entry_pc', 'rng']
     
-    def __init__(self, weights=None, states=None, prev_states=None, agent_id=None, print_callback=None):
+    def __init__(self, weights=None, states=None, prev_states=None, agent_id=None, print_callback=None, seed=None):
         self.data_stack = []
         self.chaos_stack = []
         self.entropy_register = 0.5
         self.pc = 0
         self.code = []
         self.running = False
-        self.variables = {} # Global Variables (Name to MemoryCell)
         self.call_stack = []
         self.functions = {} # Name to entry PC / Metadata
         self.checkpoints = {} # ID to snapshot
+        self.outputs = []
+        self.entry_pc = 0
+        self.rng = random.Random(seed) if seed is not None else random.Random()
+        
+        # --- Built-in Math Constants (Industrial Baseline) ---
+        self.variables = {
+            "PI": MemoryCell(math.pi),
+            "E":  MemoryCell(math.e),
+            "INF": MemoryCell(float('inf')),
+            "NAN": MemoryCell(float('nan'))
+        }
         
         # External Context for Self-Bootstrapping (Phase 20)
         self.weights = weights # NumPy Matrix (NxN)
@@ -48,9 +59,8 @@ class FluxVM:
         """Applies thermodynamic drift to all non-zero volatility variables."""
         for cell in self.variables.values():
             if cell.volatility > 0:
-                noise = random.gauss(0, cell.volatility * self.entropy_register)
-                if isinstance(cell.value, (int, float)):
-                    cell.value += noise
+                noise = self.rng.gauss(0, cell.volatility * self.entropy_register)
+                cell.value += noise
 
     def load_bytecode(self, bytecode):
         self.code = bytecode
@@ -61,97 +71,69 @@ class FluxVM:
             self.code = pickle.load(f)
         self.pc = 0
 
-    def run(self):
-        self.running = True
-        while self.running and self.pc < len(self.code):
-            instr = self.code[self.pc]
-            self.pc += 1
-            self.execute(instr)
-
-    def step(self):
-        if self.pc < len(self.code):
-            instr = self.code[self.pc]
-            self.pc += 1
-            self.execute(instr)
-            return True
-        return False
-
-    def update_agents(self):
-        """Executes the update block for all spawned agents."""
-        for agent in self.spawned_agents:
-            # 1. Switch Context
-            saved_globals = self.variables
-            self.variables = agent.variables
-            self.agent_id = agent.id
-            self.pc = agent.pc
-            self.running = True
-            
-            # 2. Run Update Block
-            while self.running and self.pc < len(self.code):
-                instr = self.code[self.pc]
-                self.pc += 1
-                self.execute(instr)
-            
-            # 3. Restore Global Context
-            self.variables = saved_globals
-            self.agent_id = None
-
     def execute(self, instr):
         op = instr[0]
-        args = instr[1:]
+        args = instr[1:] if len(instr) > 1 else []
 
-        # Stack Operations
-        if op == "PUSH":
-            self.data_stack.append(args[0])
-        elif op == "POP":
-            self.data_stack.pop()
-        elif op == "DUP":
-            self.data_stack.append(self.data_stack[-1])
-        elif op == "LOAD":
-            cell = self.variables.get(args[0], MemoryCell(0))
+        if op == "LOAD":
+            name = args[0]
+            # Industrial Guard: Stack Overflow
+            if len(self.data_stack) > 1000:
+                raise RuntimeError("FluxVM: Stack Overflow (limit 1000)")
+            cell = self.variables.get(name, MemoryCell(0.0))
             self.data_stack.append(cell.value)
         elif op == "STORE":
-            val = self.data_stack.pop()
-            if args[0] in self.variables:
-                self.variables[args[0]].value = val
-            else:
-                self.variables[args[0]] = MemoryCell(val, volatility=0.0)
-        elif op == "SET_VOL":
-            vol = self.data_stack.pop()
-            var_name = args[0]
-            if var_name in self.variables:
-                self.variables[var_name].volatility = vol
-            else:
-                self.variables[var_name] = MemoryCell(0, volatility=vol)
-        
-        elif op == "AGENT_DEF":
             name = args[0]
-            entry_pc = args[1]
-            states = args[2] 
-            volatility = args[3]
+            val = self.data_stack.pop()
+            if name in self.variables:
+                self.variables[name].value = val
+            else:
+                self.variables[name] = MemoryCell(val)
+        elif op == "LIT":
+            if len(self.data_stack) > 1000:
+                raise RuntimeError("FluxVM: Stack Overflow (limit 1000)")
+            self.data_stack.append(args[0])
+        elif op == "PRINT":
+            val = self.data_stack.pop()
+            self.print_callback(val)
+        elif op == "HALT":
+            self.running = False
+        elif op == "JMP":
+            self.pc += args[0]
+        elif op == "JMP_IF":
+            cond = self.data_stack.pop()
+            if cond:
+                self.pc += args[0]
+        elif op == "CALL":
+            # Basic call - PC jump
+            self.call_stack.append(self.pc)
+            self.pc = args[0]
+        elif op == "RET":
+            if self.call_stack:
+                self.pc = self.call_stack.pop()
+            else:
+                self.running = False
+        elif op == "AGENT_DEF":
+            name, pc, states_meta, vol = args
             self.functions[name] = {
-                'pc': entry_pc,
-                'states': states,
-                'volatility': volatility
+                'pc': pc,
+                'states': states_meta,
+                'volatility': vol
             }
-        
         elif op == "SPAWN":
-            template_name = args[0]
-            count = int(args[1])
+            template_name, count = args
             if template_name in self.functions:
                 template = self.functions[template_name]
-                print(f"[FluxVM SPAWN]: Creating {count} agents from template '{template_name}'")
-                for i in range(count):
-                    local_vars = {name: MemoryCell(val) for name, val in template['states'].items()}
+                for i in range(int(count)):
+                    local_vars = {k: MemoryCell(v) for k, v in template['states'].items()}
                     agent = AgentInstance(
-                        id=i,
+                        id=len(self.spawned_agents),
                         template_name=template_name,
                         variables=local_vars,
                         pc=template['pc'],
                         volatility=template['volatility']
                     )
                     self.spawned_agents.append(agent)
-
         elif op == "BUILD_ARRAY":
             count = args[0]
             elements = []
@@ -160,47 +142,120 @@ class FluxVM:
             # Elements are popped in reverse order
             self.data_stack.append(np.array(elements[::-1]))
 
-        # Arithmetic
+        # --- Hardened Arithmetic & Operators ---
         elif op == "ADD":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
+            # Bimodal support: string concat or numeric add
             if isinstance(a, str) or isinstance(b, str):
                 self.data_stack.append(str(a) + str(b))
             else:
+                if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+                    raise TypeError(f"ADD expects numeric operands, got {type(a)} and {type(b)}")
                 self.data_stack.append(a + b)
         elif op == "SUB":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
+            if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+                raise TypeError(f"SUB expects numeric operands, got {type(a)} and {type(b)}")
             self.data_stack.append(a - b)
         elif op == "MUL":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
+            if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+                raise TypeError(f"MUL expects numeric operands, got {type(a)} and {type(b)}")
             self.data_stack.append(a * b)
         elif op == "DIV":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
+            if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+                raise TypeError(f"DIV expects numeric operands, got {type(a)} and {type(b)}")
+            if b == 0: raise ZeroDivisionError("FluxVM: Division by zero")
             self.data_stack.append(a / b)
         elif op == "MOD":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
             self.data_stack.append(a % b)
+
+        elif op == "ARROW":
+            target = self.data_stack.pop()
+            current = self.data_stack.pop()
+            if not isinstance(current, (int, float)) or not isinstance(target, (int, float)):
+                raise TypeError(f"ARROW (\u2192) expects numeric operands, got {type(current)} and {type(target)}")
+            rate = 1.0 - self.entropy_register
+            result = current + rate * (target - current)
+            self.data_stack.append(result)
+
+        elif op == "CH_EQ":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+                raise TypeError(f"CH_EQ (\u2248) expects numeric operands, got {type(a)} and {type(b)}")
+            sensitivity = 0.1
+            match = abs(a - b) < (self.entropy_register * sensitivity)
+            self.data_stack.append(1.0 if match else 0.0)
+
+        # --- High-Performance Math Suite ---
+        elif op == "SQRT":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"SQRT expects numeric, got {type(a)}")
+            self.data_stack.append(math.sqrt(a))
+        elif op == "EXP":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"EXP expects numeric, got {type(a)}")
+            self.data_stack.append(math.exp(a))
+        elif op == "SIN":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"SIN expects numeric, got {type(a)}")
+            self.data_stack.append(math.sin(a))
+        elif op == "COS":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"COS expects numeric, got {type(a)}")
+            self.data_stack.append(math.cos(a))
+        elif op == "TAN":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"TAN expects numeric, got {type(a)}")
+            self.data_stack.append(math.tan(a))
+        elif op == "LOG":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"LOG expects numeric, got {type(a)}")
+            self.data_stack.append(math.log(a))
+        elif op == "LOG10":
+            a = self.data_stack.pop()
+            if not isinstance(a, (int, float)): raise TypeError(f"LOG10 expects numeric, got {type(a)}")
+            self.data_stack.append(math.log10(a))
+        elif op == "CEIL":
+            self.data_stack.append(math.ceil(self.data_stack.pop()))
+        elif op == "FLOOR":
+            self.data_stack.append(math.floor(self.data_stack.pop()))
+        elif op == "POW":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            self.data_stack.append(math.pow(a, b))
+        elif op == "ROUND":
+            self.data_stack.append(round(self.data_stack.pop()))
+
+        # --- Reflective & Swarm Ops ---
         elif op == "MATMUL":
             b = self.data_stack.pop()
             a = self.data_stack.pop()
             self.data_stack.append(np.dot(a, b))
+        elif op == "PUSH_OUT":
+            val = self.data_stack.pop()
+            # Constant Memory Buffer: Limit 500 outputs per tick
+            if len(self.outputs) > 500:
+                self.outputs.pop(0)
+            self.outputs.append(val)
         elif op == "INDEX":
             idx = self.data_stack.pop()
             container = self.data_stack.pop()
-            # Handle float indices from CI-Lang literals
-            if isinstance(idx, float):
-                idx = int(idx)
+            if isinstance(idx, float): idx = int(idx)
             self.data_stack.append(container[idx])
         elif op == "STORE_INDEX":
             val = self.data_stack.pop()
             idx = self.data_stack.pop()
             container = self.data_stack.pop()
-            if isinstance(idx, float):
-                idx = int(idx)
+            if isinstance(idx, float): idx = int(idx)
             container[idx] = val
         elif op == "CLIP":
             max_v = self.data_stack.pop()
@@ -214,75 +269,27 @@ class FluxVM:
             b = self.data_stack.pop()
             a = self.data_stack.pop()
             self.data_stack.append(a == b)
+        elif op == "GT":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            self.data_stack.append(a > b)
+        elif op == "LT":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            self.data_stack.append(a < b)
+        elif op == "GE":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            self.data_stack.append(a >= b)
+        elif op == "LE":
+            b = self.data_stack.pop()
+            a = self.data_stack.pop()
+            self.data_stack.append(a <= b)
         elif op == "NOT":
             a = self.data_stack.pop()
             self.data_stack.append(not a)
-
-        # Chaos Operations
-        elif op == "CHAOS_EQ":
-            b = self.data_stack.pop()
-            a = self.data_stack.pop()
-            if self.entropy_register == 0.0:
-                res = (a == b)
-            else:
-                if a == b:
-                    res = random.random() > (self.entropy_register * 0.5)
-                else:
-                    res = random.random() < (self.entropy_register * 0.5)
-            self.data_stack.append(res)
-
-        elif op == "GET_E":
-            self.data_stack.append(self.entropy_register)
-        elif op == "SET_E":
-            if args:
-                self.entropy_register = max(0.0, min(1.0, args[0]))
-            else:
-                self.entropy_register = max(0.0, min(1.0, self.data_stack.pop()))
-        elif op == "ENTROPIZE":
-            val = self.data_stack.pop()
-            noise = (random.random() - 0.5) * self.entropy_register * val
-            self.data_stack.append(val + noise)
-
-        # Control Flow
-        elif op == "JMP":
-            self.pc += args[0]
-        elif op == "JMP_IF":
-            val = self.data_stack.pop()
-            if val:
-                self.pc += args[0]
-        elif op == "CALL":
-            self.call_stack.append(self.pc)
-            self.pc = args[0]
-        elif op == "RET":
-            if self.call_stack:
-                self.pc = self.call_stack.pop()
-            else:
-                self.running = False
-        elif op == "ADAPT":
-            self.entropy_register *= 0.9
-        elif op == "PRINT":
-            self.print_callback(self.data_stack.pop())
-        elif op == "HALT":
-            self.running = False
         
-        elif op == "SAVE_STATE":
-            state_id = self.data_stack.pop()
-            self.checkpoints[state_id] = {
-                'vars': self.variables.copy(),
-                'dstack': self.data_stack.copy(),
-                'cstack': self.chaos_stack.copy(),
-                'er': self.entropy_register
-            }
-        elif op == "RESTORE_STATE":
-            state_id = self.data_stack.pop()
-            if state_id in self.checkpoints:
-                s = self.checkpoints[state_id]
-                self.variables = s['vars'].copy()
-                self.data_stack = s['dstack'].copy()
-                self.chaos_stack = s['cstack'].copy()
-                self.entropy_register = s['er']
-
-        # Reflective Reflective ISA (Self-Bootstrapping)
+        # Reflective Loads
         elif op == "LOAD_W":
             j = int(self.data_stack.pop())
             i = int(self.data_stack.pop())
@@ -318,113 +325,76 @@ class FluxVM:
                 self.data_stack.append(int(self.agent_id))
             else:
                 self.data_stack.append(-1)
-        
         elif op == "LOAD_WEIGHTS":
             if self.weights is not None:
                 self.data_stack.append(self.weights.copy())
             else:
                 self.data_stack.append(np.array([]))
-                
         elif op == "LOAD_STATES":
             if self.states is not None:
                 self.data_stack.append(self.states.copy())
             else:
                 self.data_stack.append(np.array([]))
-        
         elif op == "LOAD_PREV_STATES":
             if self.prev_states is not None:
                 self.data_stack.append(self.prev_states.copy())
             else:
                 self.data_stack.append(np.array([]))
-        
         elif op == "STORE_WEIGHTS":
             val = self.data_stack.pop()
             if self.weights is not None:
-                # Ensure physical dimensions match if possible
-                if val.shape == self.weights.shape:
-                    np.copyto(self.weights, val)
-                else:
-                    self.weights = val
-            else:
-                self.weights = val
-
+                if val.shape == self.weights.shape: np.copyto(self.weights, val)
+                else: self.weights = val
+            else: self.weights = val
         elif op == "STORE_STATES":
             val = self.data_stack.pop()
             if self.states is not None:
-                if val.shape == self.states.shape:
-                    np.copyto(self.states, val)
-                else:
-                    self.states = val
-            else:
-                self.states = val
-
+                if val.shape == self.states.shape: np.copyto(self.states, val)
+                else: self.states = val
+            else: self.states = val
         elif op == "GET_NOISE":
             if self.states is not None:
                 n = self.states.shape[0]
                 self.data_stack.append(np.random.normal(0, 1.0, n))
             else:
                 self.data_stack.append(np.array([random.gauss(0, 1.0)]))
-
         elif op == "GET_ENT_EST":
-            if self.states is not None:
-                # Basic entropy estimate (histogram based)
+            if self.states is not None and self.states.size > 0:
                 counts, _ = np.histogram(self.states, bins=10, range=(0, 1))
                 probs = counts / np.sum(counts)
                 probs = probs[probs > 0]
-                ent = -np.sum(probs * np.log2(probs)) / np.log2(10) # Normalized
+                ent = -np.sum(probs * np.log2(probs)) / np.log2(10)
                 self.data_stack.append(float(ent))
             else:
                 self.data_stack.append(0.0)
-
         elif op == "GET_SIZE":
-            if self.states is not None:
-                self.data_stack.append(int(self.states.shape[0]))
-            else:
-                self.data_stack.append(0)
-
+            if self.states is not None: self.data_stack.append(int(self.states.shape[0]))
+            else: self.data_stack.append(0)
         elif op == "CHECK_MAIL":
-            # Push mailbox content if exists, else 0
-            if self.mailbox is not None:
-                self.data_stack.append(self.mailbox)
-            else:
-                self.data_stack.append(0.0)
-
+            if self.mailbox is not None: self.data_stack.append(self.mailbox)
+            else: self.data_stack.append(0.0)
         elif op == "CLEAR_MAIL":
             self.mailbox = None
-
         elif op == "LOAD_METAB":
             self.data_stack.append(self.metabolism)
-
         elif op == "STORE_METAB":
             val = self.data_stack.pop()
             if self.metabolism is not None:
-                if val.shape == self.metabolism.shape:
-                    np.copyto(self.metabolism, val)
-                else:
-                    self.metabolism = val
-            else:
-                self.metabolism = val
+                if val.shape == self.metabolism.shape: np.copyto(self.metabolism, val)
+                else: self.metabolism = val
+            else: self.metabolism = val
 
-        elif op == "GE":
-            b = self.data_stack.pop()
-            a = self.data_stack.pop()
-            self.data_stack.append(1.0 if a >= b else 0.0)
+    def run(self, max_instructions=100000):
+        self.running = True
+        count = 0
+        while self.running and self.pc < len(self.code):
+            instr = self.code[self.pc]
+            self.pc += 1
+            self.execute(instr)
+            count += 1
+            if count > max_instructions:
+                raise RuntimeError(f"FluxVM: Instruction Limit Exceeded ({max_instructions})")
 
-        elif op == "LE":
-            b = self.data_stack.pop()
-            a = self.data_stack.pop()
-            self.data_stack.append(1.0 if a <= b else 0.0)
-
-        elif op == "GT":
-            b = self.data_stack.pop()
-            a = self.data_stack.pop()
-            self.data_stack.append(a > b)
-        elif op == "LT":
-            b = self.data_stack.pop()
-            a = self.data_stack.pop()
-            self.data_stack.append(a < b)
-
-# CLI for running bytecode
 def main():
     if len(sys.argv) > 1:
         vm = FluxVM()

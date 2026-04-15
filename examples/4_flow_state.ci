@@ -1,0 +1,12 @@
+# 4. flow_state.ci
+# State Transition using the Flow Operator (→)
+
+let current_state = 0.0
+let target_state = 100.0
+
+# The signal is pulled towards the target but damped by entropy
+# This is not a direct assignment
+current_state = current_state → target_state
+
+print("New State:")
+print(current_state)

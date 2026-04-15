@@ -1,5 +1,5 @@
 import os
-from ciparser import ProgramNode, VarDeclNode, PrintNode, ChaosBlockNode, BinaryOpNode, LiteralNode, IdentifierNode, IfNode, EntropySetNode, EntropyMeasureNode, ChaosBracketNode, FuncDeclNode, ReturnNode, AdaptNode, CallNode, SystemNode, AgentNode, SpawnNode, VolatilityStmtNode, ReflectiveLoadWNode, ReflectiveStoreWNode, ReflectiveLoadSNode, ReflectiveStoreSNode, WhileNode, ReflectiveGetIdNode, ReflectiveLoadPrevSNode, ArrayNode, ReflectiveLoadWeightsNode, ReflectiveLoadStatesNode, ReflectiveLoadPrevStatesNode, ReflectiveStoreWeightsNode, ReflectiveStoreStatesNode, ReflectiveGetNoiseNode, ClassNode, ReflectiveGetEntEstNode, ReflectiveGetSizeNode, ImportNode, IndexNode, IndexAssignNode, ReflectiveCheckMailNode, ReflectiveClearMailNode, ReflectiveLoadMetabNode, ReflectiveStoreMetabNode, ClipNode
+from ciparser import ProgramNode, VarDeclNode, PrintNode, ChaosBlockNode, BinaryOpNode, LiteralNode, IdentifierNode, IfNode, EntropySetNode, EntropyMeasureNode, ChaosBracketNode, FuncDeclNode, ReturnNode, AdaptNode, CallNode, SystemNode, AgentNode, SpawnNode, VolatilityStmtNode, ReflectiveLoadWNode, ReflectiveStoreWNode, ReflectiveLoadSNode, ReflectiveStoreSNode, WhileNode, ReflectiveGetIdNode, ReflectiveLoadPrevSNode, ArrayNode, ReflectiveLoadWeightsNode, ReflectiveLoadStatesNode, ReflectiveLoadPrevStatesNode, ReflectiveStoreWeightsNode, ReflectiveStoreStatesNode, ReflectiveGetNoiseNode, ClassNode, ReflectiveGetEntEstNode, ReflectiveGetSizeNode, ImportNode, IndexNode, IndexAssignNode, ReflectiveCheckMailNode, ReflectiveClearMailNode, ReflectiveLoadMetabNode, ReflectiveStoreMetabNode, ClipNode, PushNode
 
 class Compiler:
     def __init__(self):
@@ -19,6 +19,10 @@ class Compiler:
         elif isinstance(node, PrintNode):
             self.compile(node.expression)
             self.bytecode.append(("PRINT",))
+        
+        elif isinstance(node, PushNode):
+            self.compile(node.expression)
+            self.bytecode.append(("PUSH_OUT",))
         
         elif isinstance(node, ChaosBlockNode):
             for stmt in node.statements:
@@ -88,7 +92,7 @@ class Compiler:
                 pass
 
         elif isinstance(node, LiteralNode):
-            self.bytecode.append(("PUSH", node.value))
+            self.bytecode.append(("LIT", node.value))
         
         elif isinstance(node, IdentifierNode):
             self.bytecode.append(("LOAD", node.name))
@@ -131,6 +135,20 @@ class Compiler:
             
             if isinstance(node.callee, IdentifierNode):
                 name = node.callee.name
+                
+                # Built-in Intrinsics for Foundation High-Performance Math
+                math_ops = {
+                    "sqrt": "SQRT", "exp": "EXP", "sin": "SIN", "cos": "COS", 
+                    "tan": "TAN", "log": "LOG", "log10": "LOG10", 
+                    "ceil": "CEIL", "floor": "FLOOR", "round": "ROUND"
+                }
+                if name in math_ops:
+                    self.bytecode.append((math_ops[name],))
+                    return
+                elif name == "pow":
+                    self.bytecode.append(("POW",))
+                    return
+
                 if name not in self.functions:
                     raise Exception(f"Undefined function: {name}")
                 self.bytecode.append(("CALL", self.functions[name]))
@@ -279,23 +297,31 @@ class Compiler:
         elif isinstance(node, ImportNode):
             # Dynamic import resolution
             filename = node.filename
-            if not os.path.isabs(filename):
-                # Assume relative to current directory for now
-                pass 
+            paths_to_check = [
+                filename,
+                os.path.join("stdlib", filename),
+                os.path.join(os.path.dirname(__file__), "..", "stdlib", filename)
+            ]
             
-            if os.path.exists(filename):
+            resolved_path = None
+            for p in paths_to_check:
+                if os.path.exists(p):
+                    resolved_path = p
+                    break
+            
+            if resolved_path:
                 from cilexer import Lexer
                 from ciparser import Parser
-                with open(filename, 'r', encoding='utf-8') as f:
+                with open(resolved_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 lexer = Lexer(content)
                 parser = Parser(lexer.tokenize())
                 imported_ast = parser.parse_program()
-                # Compile statements from imported program (avoiding HALT if possible)
+                # Compile statements from imported program
                 for stmt in imported_ast.statements:
                     self.compile(stmt)
             else:
-                raise Exception(f"Import failed: file not found {filename}")
+                raise Exception(f"Import failed: file not found {filename} after checking stdlib.")
 
         elif isinstance(node, IndexNode):
             self.compile(node.left)

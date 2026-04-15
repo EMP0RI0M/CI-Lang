@@ -1,53 +1,68 @@
-<program>       ::= { <statement> | <chaos-directive> }*
+# CI-Lang v1.0 Formal Grammar (EBNF)
+# Bimodal Stability Specification
 
-<statement>     ::= <declaration> | <expression> | <control-flow> | <chaos-statement> | <import>
+program       = { statement } ;
 
-<declaration>   ::= <variable-decl> | <function-decl> | <class-decl> | <chaos-decl>
+statement     = var_decl
+              | func_decl
+              | agent_decl
+              | spawn_stmt
+              | if_stmt
+              | while_stmt
+              | push_stmt
+              | print_stmt
+              | expression ;
 
-<variable-decl> ::= "let" <identifier> [ ":" <type> ] [ "=" <expression> ] ";"
-<chaos-decl>    ::= "chaos" <identifier> "=" <chaos-expression> ";"
+# --- Declarations ---
+var_decl      = "let" identifier "=" expression [ ";" ] ;
 
-<function-decl> ::= "func" <identifier> "(" [ <parameter-list> ] ")" [ ":" <type> ] <block>
-<parameter-list> ::= <parameter> { "," <parameter> }
-<parameter>      ::= <identifier> [ ":" <type> ]
+func_decl     = "def" identifier "(" [ param_list ] ")" ":" block ;
 
-<class-decl>    ::= "class" <identifier> [ ":" <identifier> ] <block>
+agent_decl    = "agent" identifier ":" newline indent 
+                "state" ":" block
+                "update" "(" identifier ")" ":" block
+                dedent ;
 
-<block>         ::= "{" { <statement> } "}"
+spawn_stmt    = "spawn" identifier "size" "=" number [ ";" ] ;
 
-<expression>    ::= <literal> 
-                  | <identifier> 
-                  | <function-call> 
-                  | <binary-expr> 
-                  | <unary-expr> 
-                  | "(" <expression> ")"
-                  | <chaos-expression>
+# --- Blocks (Bimodal) ---
+block         = ":" ( single_statement | multi_line_block ) ;
 
-<function-call> ::= <identifier> "(" [ <argument-list> ] ")"
-<argument-list> ::= <expression> { "," <expression> }
+single_statement = statement ;
 
-<binary-expr>   ::= <expression> <operator> <expression>
-<unary-expr>    ::= <unary-op> <expression>
+multi_line_block = newline indent { statement } dedent
+                 | "{" { statement } "}" ;
 
-<operator>      ::= "+" | "-" | "*" | "/" | "%" | "**" | "==" | "!=" | "<" | ">" | "<=" | ">=" | "&&" | "||" | "≈" | "→"
-<unary-op>      ::= "!" | "~" | "entropize"
+# --- Control Flow ---
+if_stmt       = "if" expression ":" block [ "else" ":" block ] ;
 
-<control-flow>  ::= <if-stmt> | <while-stmt> | <for-stmt> | <return-stmt> | <chaos-control>
+while_stmt    = "while" expression ":" block ;
 
-<if-stmt>       ::= "if" "(" <expression> ")" <block> [ "else" <block> ]
-<while-stmt>    ::= "while" "(" <expression> ")" <block>
-<for-stmt>      ::= "for" "(" <identifier> "in" <expression> ")" <block>
-<return-stmt>   ::= "return" [ <expression> ] ";"
+push_stmt     = "push" expression [ ";" ] ;
 
-<chaos-directive> ::= "flux" <block> 
-                    | "entropy" "(" <expression> ")" <block>
-                    | "adapt" <identifier> "to" <expression> ";"
+print_stmt    = "print" "(" expression ")" [ ";" ] ;
 
-<chaos-control>   ::= "chaos" <block>
+# --- Expressions ---
+expression    = binary_op ;
 
-<chaos-expression> ::= "⟨" <expression> "⟨" | <expression> "→" <expression>
+binary_op     = unary_op { operator unary_op } ;
 
-<type>          ::= "int" | "float" | "string" | "bool" | <identifier>
+operator      = "+" | "-" | "*" | "/" | "→" | "≈" | "==" | ">" | "<" ;
 
-<identifier>    ::= <letter> { <letter> | <digit> | "_" }
-<literal>       ::= <integer> | <float> | <string> | <boolean>
+unary_op      = [ "-" ] primary ;
+
+primary       = number
+              | string
+              | identifier
+              | "(" expression ")"
+              | call_expr ;
+
+call_expr     = identifier "(" [ arg_list ] ")" ;
+
+# --- Tokens ---
+identifier    = [a-zA-Z_][a-zA-Z0-9_]* ;
+number        = [0-9]+(\.[0-9]+)? ;
+string        = "\"" .*? "\"" ;
+indent        = <LEXER_INDENT> ;
+dedent        = <LEXER_DEDENT> ;
+newline       = <LEXER_NEWLINE> ;

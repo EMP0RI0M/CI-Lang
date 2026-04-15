@@ -1,0 +1,8 @@
+# tests/core/2_flow.ci
+let x = 0.0
+# lambda defaults to 0.5 in VM
+# rate = 1.0 - 0.5 = 0.5
+# x = 0 + 0.5 * (10 - 0) = 5.0
+x = x → 10.0
+if x == 5.0:
+    print("PASS")

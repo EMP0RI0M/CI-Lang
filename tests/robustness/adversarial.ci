@@ -1,0 +1,15 @@
+# tests/robustness/adversarial.ci
+# Testing Resilience against Numerical Overflow and Buffer Flooding
+
+agent Flooder:
+    state:
+        # Pushing toward floating point infinity
+        growth = 1.0e100
+    
+    update(dt):
+        growth = growth * growth
+        # Flooding the output buffer
+        push "DETONATION_ATTEMPT"
+        push growth
+
+spawn Flooder size = 100;

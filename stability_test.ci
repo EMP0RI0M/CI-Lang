@@ -1,0 +1,22 @@
+# stability_test.ci
+# Refined test for Memory-Augmented Stability
+
+let id = reflect::get_id();
+let x = id * 0.01;
+let target = 5.0;
+
+while (1) {
+    # Agents drift upwards
+    x = x + 0.05;
+    
+    # The 'edge of chaos' check
+    # As global entropy drops (due to Memory M), 
+    # this ≈ operator becomes more 'deterministic', 
+    # forcing consensus.
+    if (x ≈ target) {
+        x = target;
+    }
+    
+    # Push x to stack for the manager to collect
+    push x;
+}

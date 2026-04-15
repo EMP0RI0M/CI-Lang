@@ -1,0 +1,5 @@
+# 1. math_core.ci
+# Simple arithmetic in CI-Lang v1.0
+let x = 5 + 2
+let y = x * 10
+print(y) 
