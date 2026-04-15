@@ -1,7 +1,7 @@
 # Patent Portfolio: Neuro-Symbolic Agents & Chaos Intelligence
 
 **Date**: 2026-01-18
-**Owner**: [User Name/Organization]
+**Owner**: Rafi Ullah Khan
 **Status**: DRAFT DISCLOSURE
 
 This document aggregates the distinct, patent-eligible technical inventions developed during the Chaos Intelligence (CI-Lang) research project.
