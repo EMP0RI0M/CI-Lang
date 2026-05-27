@@ -2,6 +2,14 @@ use x86_64::structures::paging::{OffsetPageTable, PageTable, PhysFrame, Size4KiB
 use x86_64::{PhysAddr, VirtAddr};
 use bootloader_api::info::{MemoryRegionKind, MemoryRegions};
 
+use spin::Once;
+
+static PHYSICAL_MEMORY_OFFSET: Once<VirtAddr> = Once::new();
+
+pub fn get_physical_memory_offset() -> VirtAddr {
+    *PHYSICAL_MEMORY_OFFSET.get().expect("Physical memory offset not initialized")
+}
+
 /// Initialize a new OffsetPageTable.
 ///
 /// This function is unsafe because the caller must guarantee that the
@@ -9,6 +17,7 @@ use bootloader_api::info::{MemoryRegionKind, MemoryRegions};
 /// `physical_memory_offset`. Also, this function must be only called once
 /// to avoid aliasing `&mut` references (which is undefined behavior).
 pub unsafe fn init(physical_memory_offset: VirtAddr) -> OffsetPageTable<'static> {
+    PHYSICAL_MEMORY_OFFSET.call_once(|| physical_memory_offset);
     let level_4_table = active_level_4_table(physical_memory_offset);
     OffsetPageTable::new(level_4_table, physical_memory_offset)
 }
