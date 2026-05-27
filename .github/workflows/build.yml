@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Install Rust Nightly
       uses: dtolnay/rust-toolchain@nightly
@@ -23,7 +23,7 @@ jobs:
       
     - name: Build FluxOS (x86_64-os.json target)
       working-directory: ./rust_vm
-      run: cargo build --target x86_64-os.json
+      run: cargo build -Zjson-target-spec --target x86_64-os.json
       
     - name: Run Tests
       working-directory: ./rust_vm
