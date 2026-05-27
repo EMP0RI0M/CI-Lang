@@ -105,6 +105,18 @@ impl Parser {
                         code.push(Instruction::new(Opcode::AdaptGain(*num)));
                     }
                 }
+                Token::NetSend => {
+                    // NET_SEND(ident)
+                    if let Some(Token::Identifier(name)) = self.advance() {
+                        code.push(Instruction::new(Opcode::NetSend(Self::leak_string(name.clone()))));
+                    }
+                }
+                Token::NetRecv => {
+                    // NET_RECV(ident)
+                    if let Some(Token::Identifier(name)) = self.advance() {
+                        code.push(Instruction::new(Opcode::NetRecv(Self::leak_string(name.clone()))));
+                    }
+                }
                 Token::Identifier(_name) => {}
                 _ => {}
             }

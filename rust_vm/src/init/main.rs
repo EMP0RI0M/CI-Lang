@@ -30,6 +30,12 @@ pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     crate::arch::init();
     kernel_println!("Hardware Abstraction Layer (HAL) Initialized.");
     
+    kernel_println!("Scanning Hardware Bus...");
+    crate::drivers::pci::enumerate_buses();
+    
+    kernel_println!("Initializing Network Subsystem...");
+    crate::net::init();
+    
     kernel_println!("Testing CPU Exception Handling (int3 Breakpoint)...");
     x86_64::instructions::interrupts::int3();
     

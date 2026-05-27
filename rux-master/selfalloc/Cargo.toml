@@ -1,0 +1,13 @@
+[package]
+name = "selfalloc"
+version = "0.1.0"
+authors = ["Wei Tang <hi@that.world>"]
+
+[dependencies.system]
+path = "../system"
+
+[dependencies.spin]
+path = "../spin"
+
+[dependencies.abi]
+path = "../abi"

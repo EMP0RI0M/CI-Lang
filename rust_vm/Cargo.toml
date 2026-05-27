@@ -9,6 +9,7 @@ spin = "0.9.8"
 x86_64 = "0.14.10"
 pic8259 = "0.10.1"
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
+smoltcp = { version = "0.11", default-features = false, features = ["alloc", "medium-ethernet", "proto-ipv4", "socket-tcp"] }
 
 [profile.dev]
 panic = "abort"

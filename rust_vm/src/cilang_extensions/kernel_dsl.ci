@@ -17,3 +17,16 @@ agent USBEnumerator:
         // ...
         
         PROC_YIELD
+
+agent NetworkObserver:
+    state:
+        packet_count = 0.0
+        
+    update(dt):
+        // Read incoming network packets
+        NET_RECV packet_data
+        
+        // Broadcast telemetry to network
+        NET_SEND packet_count
+        
+        PROC_YIELD

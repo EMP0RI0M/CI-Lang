@@ -1,0 +1,8 @@
+[package]
+name = "abi"
+version = "0.1.0"
+authors = ["Wei Tang <hi@that.world>"]
+
+[features]
+default = []
+kernel_debug = []

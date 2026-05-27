@@ -181,6 +181,14 @@ impl Vm {
             Opcode::AdaptGain(gain) => {
                 self.maac.cooling_rate = *gain;
             }
+            Opcode::NetSend(_name) => {
+                // Trap to kernel to handle network packet sending
+                return Ok(Some(TrapReason::ProcYield)); // Stub for now
+            }
+            Opcode::NetRecv(_name) => {
+                // Trap to kernel to handle network packet receiving
+                return Ok(Some(TrapReason::ProcYield)); // Stub for now
+            }
             _ => return Ok(None) // Ignoring other ops in this stub
         }
         Ok(None)

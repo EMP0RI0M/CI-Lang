@@ -1,0 +1,29 @@
+[package]
+name = "kernel"
+version = "0.0.1"
+authors = ["Wei Tang <hi@that.world>"]
+
+[lib]
+crate-type = ["staticlib"]
+
+[dependencies.abi]
+path = "../abi"
+
+[dependencies.lazy_static]
+version = "0.2"
+path = "../lazy_static"
+features = ["spin_no_std"]
+
+[dependencies.bitflags]
+version = "0.8"
+
+[dependencies.spin]
+path = "../spin"
+version = "0.4"
+
+[dependencies.rlibc]
+version = "1.0"
+
+[features]
+default = ["kernel_debug"]
+kernel_debug = ["abi/kernel_debug"]

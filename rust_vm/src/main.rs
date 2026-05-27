@@ -10,6 +10,7 @@ pub mod drivers;
 pub mod init;
 pub mod kernel;
 pub mod mm;
+pub mod net;
 
 use bootloader_api::entry_point;
 

@@ -11,6 +11,8 @@ pub enum Token {
     EntropySample,
     StallOnDiv,
     AdaptGain,
+    NetSend,
+    NetRecv,
     Identifier(String),
     Number(f64),
     Equals,
@@ -96,6 +98,8 @@ impl<'a> Lexer<'a> {
                 "ENTROPY_SAMPLE" => Token::EntropySample,
                 "STALL_ON_DIV" => Token::StallOnDiv,
                 "ADAPT_GAIN" => Token::AdaptGain,
+                "NET_SEND" => Token::NetSend,
+                "NET_RECV" => Token::NetRecv,
                 _ => Token::Identifier(ident),
             };
         }

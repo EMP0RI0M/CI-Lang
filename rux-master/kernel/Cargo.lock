@@ -1,0 +1,39 @@
+[[package]]
+name = "abi"
+version = "0.1.0"
+
+[[package]]
+name = "bitflags"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "kernel"
+version = "0.0.1"
+dependencies = [
+ "abi 0.1.0",
+ "bitflags 0.8.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 0.2.9",
+ "rlibc 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "spin 0.4.4",
+]
+
+[[package]]
+name = "lazy_static"
+version = "0.2.9"
+dependencies = [
+ "spin 0.4.4",
+]
+
+[[package]]
+name = "rlibc"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "spin"
+version = "0.4.4"
+
+[metadata]
+"checksum bitflags 0.8.2 (registry+https://github.com/rust-lang/crates.io-index)" = "1370e9fc2a6ae53aea8b7a5110edbd08836ed87c88736dfabccade1c2b44bff4"
+"checksum rlibc 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "fc874b127765f014d792f16763a81245ab80500e2ad921ed4ee9e82481ee08fe"

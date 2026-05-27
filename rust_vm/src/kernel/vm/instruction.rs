@@ -22,6 +22,8 @@ pub enum Opcode {
     EntropySample(&'static str),
     StallOnDiv(f64),
     AdaptGain(f64),
+    NetSend(&'static str),
+    NetRecv(&'static str),
 }
 
 #[derive(Debug, Clone, PartialEq)]
