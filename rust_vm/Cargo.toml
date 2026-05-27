@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 bootloader_api = { path = "../bootloader-main/api" }
-spin = "0.9.8"
+spin = { version = "0.9.8", features = ["once"] }
 x86_64 = "0.14.10"
 pic8259 = "0.10.1"
 lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
