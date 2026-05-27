@@ -277,7 +277,7 @@ impl<'a> TxToken for E1000TxToken<'a> {
             self.device.write_reg(REG_TDT, next_tx as u32);
 
             // Wait for transmission to complete (polling status bit 0 DD)
-            while (core::ptr::read_volatile(&self.device.tx_ring[tx_index].status) & 1) == 0 {
+            while (core::ptr::read_volatile(core::ptr::addr_of!(self.device.tx_ring[tx_index].status)) & 1) == 0 {
                 core::hint::spin_loop();
             }
         }
@@ -292,7 +292,8 @@ impl Device for E1000Device {
 
     fn receive(&mut self, _timestamp: Instant) -> Option<(Self::RxToken<'_>, Self::TxToken<'_>)> {
         let rx_index = self.rx_cur;
-        let status = unsafe { core::ptr::read_volatile(&self.rx_ring[rx_index].status) };
+        let status = unsafe { core::ptr::read_volatile(core::ptr::addr_of!(self.rx_ring[rx_index].status)) };
+
 
         if (status & 1) != 0 {
             // Packet is available (DD bit set)
