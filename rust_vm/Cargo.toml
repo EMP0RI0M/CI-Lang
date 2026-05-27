@@ -1,0 +1,17 @@
+[package]
+name = "rust_vm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bootloader_api = { path = "../bootloader-main/api" }
+spin = "0.9.8"
+x86_64 = "0.14.10"
+pic8259 = "0.10.1"
+lazy_static = { version = "1.4.0", features = ["spin_no_std"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"

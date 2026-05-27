@@ -1,0 +1,19 @@
+// CI-Lang Kernel Definitions (Phase 1 to Phase 2 Bridge)
+
+agent USBEnumerator:
+    state:
+        entropy_used = 0.0
+        
+    update(dt):
+        // Sample the hardware entropy directly from the OS
+        ENTROPY_SAMPLE entropy_used
+        
+        // Yield if we are drifting too far from baseline
+        if entropy_used > 0.5:
+            STALL_ON_DIV 0.5
+            ADAPT_GAIN 0.7
+        
+        // Otherwise, run enumeration logic
+        // ...
+        
+        PROC_YIELD
