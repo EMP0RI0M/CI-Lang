@@ -20,7 +20,7 @@ jobs:
         components: rust-src, llvm-tools-preview
         
     - name: Install bootimage
-      run: cargo install bootimage --locked
+      run: rustup toolchain install stable && cargo +stable install bootimage --locked
       
     - name: Build FluxOS (x86_64-os.json target)
       working-directory: ./rust_vm
