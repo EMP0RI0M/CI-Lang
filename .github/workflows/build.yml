@@ -14,9 +14,8 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Install Rust Nightly
-      uses: dtolnay/rust-toolchain@master
+      uses: dtolnay/rust-toolchain@nightly
       with:
-        toolchain: nightly-2023-02-01
         components: rust-src, llvm-tools-preview
         
     - name: Install bootimage
@@ -24,8 +23,8 @@ jobs:
       
     - name: Build FluxOS (x86_64-os.json target)
       working-directory: ./rust_vm
-      run: cargo build -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
+      run: cargo build -Zjson-target-spec -Zbuild-std=core,compiler_builtins,alloc,panic_abort -Zbuild-std-features=compiler-builtins-mem
       
     - name: Run Tests
       working-directory: ./rust_vm
-      run: cargo test -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
+      run: cargo test -Zjson-target-spec -Zbuild-std=core,compiler_builtins,alloc,panic_abort -Zbuild-std-features=compiler-builtins-mem
