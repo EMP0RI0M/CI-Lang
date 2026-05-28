@@ -23,8 +23,8 @@ jobs:
       
     - name: Build FluxOS (x86_64-os.json target)
       working-directory: ./rust_vm
-      run: cargo build -Zjson-target-spec -Zbindeps -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
+      run: cargo build -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
       
     - name: Run Tests
       working-directory: ./rust_vm
-      run: cargo test -Zjson-target-spec -Zbindeps -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
+      run: cargo test -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
