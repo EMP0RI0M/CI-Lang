@@ -1,3 +1,4 @@
+#![allow(dead_code)]
 use alloc::vec::Vec;
 use core::alloc::Layout;
 use x86_64::VirtAddr;
@@ -6,8 +7,6 @@ use smoltcp::time::Instant;
 use crate::kernel_println;
 use crate::drivers::pci;
 use crate::mm::paging::get_physical_memory_offset;
-
-#![allow(dead_code)]
 
 // E1000 Registers
 const REG_CTRL: u32 = 0x0000;
