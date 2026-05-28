@@ -1,4 +1,4 @@
-use bootloader_api::info::{FrameBufferInfo, PixelFormat};
+use bootloader_api::info::FrameBufferInfo;
 use spin::Mutex;
 
 pub static WRITER: Mutex<Option<Writer>> = Mutex::new(None);

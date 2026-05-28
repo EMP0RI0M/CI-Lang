@@ -1,5 +1,7 @@
 pub mod gdt;
 pub mod interrupts;
+pub mod boot;
+pub mod panic;
 
 pub fn init() {
     gdt::init();

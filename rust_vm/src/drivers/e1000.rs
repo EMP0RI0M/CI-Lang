@@ -1,7 +1,5 @@
 use alloc::vec::Vec;
-use alloc::boxed::Box;
 use core::alloc::Layout;
-use spin::Mutex;
 use x86_64::VirtAddr;
 use smoltcp::phy::{Device, DeviceCapabilities, RxToken, TxToken, ChecksumCapabilities, Medium};
 use smoltcp::time::Instant;

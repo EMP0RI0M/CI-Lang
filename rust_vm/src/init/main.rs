@@ -3,7 +3,7 @@ use crate::drivers::display;
 use crate::arch::x86_64::boot;
 use crate::kernel::capability::CapabilityToken;
 use crate::kernel::vm::Vm;
-use crate::kernel::vm::instruction::{Instruction, Opcode};
+// Removed unused Instruction and Opcode imports
 use crate::kernel_println;
 
 pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
@@ -89,8 +89,6 @@ pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     
     // Loop infinitely, letting the hardware timer trap and context-switch
     loop {
-        crate::arch::x86_64::cpu::halt();
+        x86_64::instructions::hlt();
     }
-    
-    crate::arch::x86_64::cpu::halt();
 }

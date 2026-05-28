@@ -31,15 +31,23 @@ impl Scheduler {
         loop {
             let mut all_halted = true;
             for i in 0..4 {
+                let mut trap_to_handle = None;
                 if let Some(vm) = &mut self.vms[i] {
                     if !vm.is_running() { continue; }
                     all_halted = false;
                     
                     match vm.step() {
-                        Ok(Some(trap)) => self.handle_trap(i, trap, orchestrator)?,
+                        Ok(Some(trap)) => trap_to_handle = Some(trap),
                         Ok(None) => {}
                         Err(e) => return Err(e),
                     }
+                }
+                
+                if let Some(trap) = trap_to_handle {
+                    self.handle_trap(i, trap, orchestrator)?;
+                }
+                
+                if let Some(vm) = &mut self.vms[i] {
                     if vm.is_running() {
                         vm.drift();
                         vm.maac.cool_down(); // Mathematically throttle and cool down the agent

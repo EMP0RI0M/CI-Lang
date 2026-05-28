@@ -5,7 +5,7 @@ use alloc::vec;
 use crate::kernel_println;
 use crate::drivers::pci;
 use crate::drivers::e1000::E1000Device;
-use smoltcp::socket::{TcpSocket, TcpSocketBuffer};
+use smoltcp::socket::tcp::{Socket as TcpSocket, SocketBuffer as TcpSocketBuffer};
 use smoltcp::time::Instant;
 
 fn find_e1000() -> Option<(u8, u8, u8)> {

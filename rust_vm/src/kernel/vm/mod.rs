@@ -3,6 +3,7 @@ pub mod trap;
 pub mod maac;
 
 use crate::mm::Memory;
+use crate::mm::Value;
 use crate::kernel::vm::instruction::{Instruction, Opcode};
 use crate::kernel::vm::trap::TrapReason;
 use crate::kernel::vm::maac::MaacController;
@@ -69,7 +70,7 @@ impl Vm {
         */
     }
 
-    pub fn step(&mut self) -> Result<Option<TrapReason>, &str> {
+    pub fn step(&mut self) -> Result<Option<TrapReason>, &'static str> {
         if !self.running || self.pc >= self.code.len() {
             self.running = false;
             return Ok(Some(TrapReason::Halt));
@@ -92,7 +93,7 @@ impl Vm {
         self.execute_instruction(&instr)
     }
 
-    fn execute_instruction(&mut self, instr: &Instruction) -> Result<Option<TrapReason>, &str> {
+    fn execute_instruction(&mut self, instr: &Instruction) -> Result<Option<TrapReason>, &'static str> {
         // Implementation stripped to the core MVP to ensure no_std compilation
         match &instr.op {
             Opcode::Lit(val) => { self.memory.push(Value::Float(*val))?; }
