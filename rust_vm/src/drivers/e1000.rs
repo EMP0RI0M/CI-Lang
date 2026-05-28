@@ -7,6 +7,8 @@ use crate::kernel_println;
 use crate::drivers::pci;
 use crate::mm::paging::get_physical_memory_offset;
 
+#![allow(dead_code)]
+
 // E1000 Registers
 const REG_CTRL: u32 = 0x0000;
 const REG_STATUS: u32 = 0x0008;

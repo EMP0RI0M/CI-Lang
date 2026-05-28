@@ -4,7 +4,7 @@ use spin::Mutex;
 pub static WRITER: Mutex<Option<Writer>> = Mutex::new(None);
 
 pub struct Writer {
-    buffer: &'static mut [u8],
+    _buffer: &'static mut [u8],
     info: FrameBufferInfo,
     x_pos: usize,
     y_pos: usize,
@@ -12,7 +12,7 @@ pub struct Writer {
 
 impl Writer {
     pub fn new(buffer: &'static mut [u8], info: FrameBufferInfo) -> Self {
-        Self { buffer, info, x_pos: 0, y_pos: 0 }
+        Self { _buffer: buffer, info, x_pos: 0, y_pos: 0 }
     }
 
     pub fn write_byte(&mut self, byte: u8) {

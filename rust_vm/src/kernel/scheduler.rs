@@ -6,14 +6,14 @@ use crate::kernel_println;
 pub struct Scheduler {
     // Limited to 4 VMs for MVP to avoid dynamic allocation via Vec
     vms: [Option<Vm>; 4],
-    seed: u64,
+    _seed: u64,
 }
 
 impl Scheduler {
     pub fn new(seed: u64) -> Self {
         Self {
             vms: [None, None, None, None],
-            seed,
+            _seed: seed,
         }
     }
 

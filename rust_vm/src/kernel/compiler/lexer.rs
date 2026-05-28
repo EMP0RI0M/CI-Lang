@@ -27,7 +27,7 @@ pub enum Token {
 }
 
 pub struct Lexer<'a> {
-    input: &'a str,
+    _input: &'a str,
     pos: usize,
     chars: Vec<char>,
 }
@@ -35,7 +35,7 @@ pub struct Lexer<'a> {
 impl<'a> Lexer<'a> {
     pub fn new(input: &'a str) -> Self {
         Self {
-            input,
+            _input: input,
             pos: 0,
             chars: input.chars().collect(),
         }
