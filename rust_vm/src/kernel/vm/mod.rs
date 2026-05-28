@@ -18,6 +18,7 @@ pub struct Vm {
     pub entropy_register: f64,
     pub capabilities: CapabilityToken,
     pub maac: MaacController,
+    pub entropy_budget: f64,
 }
 
 impl Vm {
@@ -30,6 +31,7 @@ impl Vm {
             entropy_register: 0.5,
             capabilities,
             maac: MaacController::new(0.8, 0.1), // tau = 0.8, cooling = 10%
+            entropy_budget: 1.0,
         }
     }
 
@@ -189,6 +191,19 @@ impl Vm {
             Opcode::NetRecv(_name) => {
                 // Trap to kernel to handle network packet receiving
                 return Ok(Some(TrapReason::ProcYield)); // Stub for now
+            }
+            Opcode::SpawnProcess(name, priority) => {
+                return Ok(Some(TrapReason::SpawnProcess { name: *name, priority: *priority }));
+            }
+            Opcode::SetPriority(priority) => {
+                return Ok(Some(TrapReason::SetPriority(*priority)));
+            }
+            Opcode::SetEntropyBudget(budget) => {
+                self.entropy_budget = *budget;
+                return Ok(Some(TrapReason::SetEntropyBudget(*budget)));
+            }
+            Opcode::KillProcess(name) => {
+                return Ok(Some(TrapReason::KillProcess(*name)));
             }
             _ => return Ok(None) // Ignoring other ops in this stub
         }

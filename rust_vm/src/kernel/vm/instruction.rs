@@ -24,6 +24,12 @@ pub enum Opcode {
     AdaptGain(f64),
     NetSend(&'static str),
     NetRecv(&'static str),
+    
+    // Phase 1 Kernel OS Extensions
+    SpawnProcess(&'static str, usize), // name, priority
+    SetPriority(usize),
+    SetEntropyBudget(f64),
+    KillProcess(&'static str),
 }
 
 #[derive(Debug, Clone, PartialEq)]

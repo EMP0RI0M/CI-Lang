@@ -17,6 +17,12 @@ pub enum TrapReason {
     SpawnAgent(usize),
     ProcYield,
     StallOnDiv,
+    
+    // Phase 1 Kernel OS Extensions
+    SpawnProcess { name: &'static str, priority: usize },
+    SetPriority(usize),
+    SetEntropyBudget(f64),
+    KillProcess(&'static str),
 }
 
 pub struct HardwareContext {
