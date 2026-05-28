@@ -19,3 +19,8 @@ panic = "abort"
 
 [profile.test]
 panic = "abort"
+
+[[bin]]
+name = "rust_vm"
+path = "src/main.rs"
+harness = false
