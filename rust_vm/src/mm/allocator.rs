@@ -88,7 +88,7 @@ unsafe impl GlobalAlloc for Locked<BumpAllocator> {
 }
 
 pub fn init_heap(allocator: &Locked<BumpAllocator>) {
-    let heap_start = core::ptr::addr_of!(HEAP_MEM) as usize;
+    let heap_start = unsafe { core::ptr::addr_of!(HEAP_MEM) } as usize;
     unsafe {
         allocator.lock().init(heap_start, HEAP_SIZE);
     }

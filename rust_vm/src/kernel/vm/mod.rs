@@ -161,7 +161,7 @@ impl Vm {
                 // For this MVP, we just probe a local variable's volatility.
                 if let Some(val) = self.memory.load(target) {
                     if let Value::Float(f) = val {
-                        self.memory.push(Value::Float(f.abs()))?;
+                        self.memory.push(Value::Float(if f < 0.0 { -f } else { f }))?;
                     }
                 }
             }

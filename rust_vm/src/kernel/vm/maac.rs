@@ -26,7 +26,7 @@ impl MaacController {
         for cell in memory.values() {
             if let Value::Float(f) = cell.value {
                 // A simplified variance/entropy metric
-                sum += f.abs(); 
+                sum += if f < 0.0 { -f } else { f };
                 count += 1;
             }
         }
