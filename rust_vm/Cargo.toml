@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-bootloader_api = "0.11.15"
+bootloader_api = "=0.11.9"
 spin = { version = "0.9.8", features = ["once"] }
 x86_64 = "0.14.10"
 pic8259 = "0.10.1"
