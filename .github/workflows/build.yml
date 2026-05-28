@@ -27,4 +27,4 @@ jobs:
       
     - name: Run Tests
       working-directory: ./rust_vm
-      run: cargo test -Zbindeps -Zjson-target-spec
+      run: cargo test -Zjson-target-spec -Zbindeps -Zbuild-std=core,compiler_builtins,alloc -Zbuild-std-features=compiler-builtins-mem --target x86_64-os.json
