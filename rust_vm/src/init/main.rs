@@ -16,8 +16,8 @@ pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
     kernel_println!("CI-Lang OS (Linux-style Directory Layout) Booting...");
     
     let phys_mem_offset = x86_64::VirtAddr::new(boot_info.physical_memory_offset.into_option().unwrap());
-    let mut mapper = unsafe { crate::mm::paging::init(phys_mem_offset) };
-    let mut frame_allocator = unsafe {
+    let _mapper = unsafe { crate::mm::paging::init(phys_mem_offset) };
+    let _frame_allocator = unsafe {
         crate::mm::paging::BootInfoFrameAllocator::init(&boot_info.memory_regions)
     };
     
@@ -49,7 +49,7 @@ pub fn kernel_main(boot_info: &'static mut BootInfo) -> ! {
         deterministic_seed: 42,
     };
     
-    let mut kernel = boot::boot_system(config);
+    let _kernel = boot::boot_system(config);
     
     kernel_println!("Spawning Root VM Agent with CI-Lang compiler...");
     let root_caps = CapabilityToken::root();

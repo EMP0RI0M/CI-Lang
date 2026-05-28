@@ -143,7 +143,7 @@ impl Vm {
                 self.running = false;
                 return Ok(Some(TrapReason::Halt));
             }
-            Opcode::TrapSemantic(op_name, arg_count) => {
+            Opcode::TrapSemantic(op_name, _arg_count) => {
                 if !self.capabilities.has_right(&CapRight::SemanticEscalation) {
                     return Ok(Some(TrapReason::CapabilityFault { message: "No SemanticEscalation right" }));
                 }
